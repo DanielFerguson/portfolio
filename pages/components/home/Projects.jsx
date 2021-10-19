@@ -24,7 +24,7 @@ const projects = [{
 {
     name: 'Real News',
     icon: faNewspaper,
-    link: 'https://userealnews.app'
+    link: 'https://userealnews.com'
 },
 {
     name: 'TrafficZone',
