@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const posts = [
     {
         title: 'You are the product',
@@ -7,8 +9,7 @@ const posts = [
             'The fallacy of ‘free’ has blinded us by and large to the fact that we are paying for it, just in ways we don’t immediately see.',
         date: 'Jan 02, 2021',
         datetime: '2021-01-02',
-        imageUrl:
-            'https://images.unsplash.com/photo-1565591452825-67d6b7df1d47?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1026&q=80',
+        imageUrl: '/images/articles/spy.jpeg',
         readingTime: '6 min',
     },
     {
@@ -19,8 +20,7 @@ const posts = [
             'Let me ask you this - where is your money at the moment? Your knee-jerk reaction may say ‘oh, it’s in the bank!’, but you money doesn’t live there. I won’t try and get into the complex nature of how banks reinvest and lend your money to recoup… you know what? I’m even bored now.',
         date: 'Dec 23, 2020',
         datetime: '2020-12-23',
-        imageUrl:
-            'https://images.unsplash.com/photo-1522735338363-cc7313be0ae0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80',
+        imageUrl: '/images/articles/energy.jpeg',
         readingTime: '4 min',
     },
     {
@@ -31,8 +31,7 @@ const posts = [
             'This year has been the wildest, most productive, most humbling year of my life to date. A single idea has lit the way for the creation of some of what I think are the most ambition, long-needed and impactful initiatives Australia has seen in a while; at very least from such a young group of people.',
         date: 'Dev 13, 2020',
         datetime: '2020-12-13',
-        imageUrl:
-            'https://images.unsplash.com/photo-1487297977649-04b1dc408d93?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
+        imageUrl: '/images/articles/alone.jpeg',
         readingTime: '11 min',
     },
 ]
@@ -44,7 +43,7 @@ export default function Articles() {
                 <div className="text-center">
                     <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">And every now and then I like to write. </h2>
                     <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                        It’s a great way to share knowledge, remember how far we've come and
+                        It’s a great way to share knowledge, remember how far we&apos;ve come and
                         create dialogue on topics that interest me or are near to my heart.
                     </p>
                 </div>
@@ -52,7 +51,13 @@ export default function Articles() {
                     {posts.map((post) => (
                         <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                             <div className="flex-shrink-0">
-                                <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
+                                <Image
+                                    className="h-48 w-full object-cover"
+                                    src={post.imageUrl}
+                                    alt=""
+                                    width={500}
+                                    height={500}
+                                />
                             </div>
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                                 <div className="flex-1">

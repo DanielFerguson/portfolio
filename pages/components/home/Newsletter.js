@@ -5,7 +5,7 @@ export default function Newsletter() {
                 <div className="lg:w-0 lg:flex-1">
                     <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Sign up to be notified.</h2>
                     <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                        When I release an article, I notify my mailing list so you don't need to keep coming back to the site and checking to see if a new article is there.
+                        When I release an article, I notify my mailing list so you don&apos;t need to keep coming back to the site and checking to see if a new article is there.
                     </p>
                 </div>
                 <div className="mt-8 lg:mt-0 lg:ml-8">

@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Image from 'next/image';
 
 const navigation = [
     { name: 'Projects', href: '#projects' },
@@ -30,9 +31,10 @@ export default function Hero() {
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <a href="#">
                                             <span className="sr-only">Workflow</span>
-                                            <img
+                                            <Image
                                                 className="h-8 w-auto sm:h-10"
                                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                                alt=""
                                             />
                                         </a>
                                         <div className="-mr-2 flex items-center md:hidden">
@@ -72,7 +74,7 @@ export default function Hero() {
                                 <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                                     <div className="px-5 pt-4 flex items-center justify-between">
                                         <div>
-                                            <img
+                                            <Image
                                                 className="h-8 w-auto"
                                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                                 alt=""
@@ -122,7 +124,7 @@ export default function Hero() {
                                         href="#contact"
                                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                                     >
-                                        Let's talk
+                                        Let&apos;s talk
                                     </a>
                                 </div>
                                 <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -139,7 +141,7 @@ export default function Hero() {
                 </div>
             </div>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img
+                <Image
                     className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
                     src="/snow.jpg"
                     alt=""
