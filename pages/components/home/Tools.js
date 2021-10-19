@@ -49,7 +49,7 @@ export default function Tools() {
                 </p>
                 <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
                     {tools.map(tool => (
-                        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                        <div key={tool.title} className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
                             <FontAwesomeIcon icon={tool.icon} size="3x" color="grey" />
                         </div>
                     ))}

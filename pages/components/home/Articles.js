@@ -65,7 +65,7 @@ export default function Articles() {
                                     <p className="text-sm font-medium text-indigo-600">
                                         {post.category.name}
                                     </p>
-                                    <a href={post.href} target="_blank" className="block mt-2">
+                                    <a href={post.href} target="_blank" rel="noreferrer" className="block mt-2">
                                         <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                                         <p className="mt-3 text-base text-gray-500">{post.description}</p>
                                     </a>

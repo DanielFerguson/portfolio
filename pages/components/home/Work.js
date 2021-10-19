@@ -33,7 +33,7 @@ export default function Work() {
                     <div>
                         <h2 className="text-3xl font-extrabold text-gray-900">Employment</h2>
                         <p className="mt-4 text-lg text-gray-500">
-                            I've had the pleasure of working on a number of exciting projects in various dynamic, fast-paced environments.
+                            I&apos;ve had the pleasure of working on a number of exciting projects in various dynamic, fast-paced environments.
                         </p>
                     </div>
                     <div className="mt-12 lg:mt-0 lg:col-span-2">
