@@ -7,17 +7,8 @@ import Articles from './components/home/Articles';
 import Newsletter from './components/home/Newsletter';
 import Contact from './components/home/Contact';
 
-// Content
-// TODO: Update logo on the front page
-// TODO: Update text under My Projects
-// TODO: Update text under Skills
-// TODO: Fill in tools section
-
 // Functionality
 // TODO: Add newsletter signup, add API route
-
-// Final
-// TODO: Resize images
 
 export default function Home() {
   return (
@@ -28,7 +19,7 @@ export default function Home() {
       <Skills />
       <Tools />
       <Articles />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Contact />
     </div>
   )

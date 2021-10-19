@@ -4,38 +4,26 @@ import { faBracketsCurly, faLayerGroup, faLightbulb, faCloud, faUsers, faTasks }
 const skills = [
     {
         name: 'Software Development',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
         icon: faBracketsCurly,
     },
     {
         name: 'Solutions Architecture',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
         icon: faLayerGroup,
     },
     {
         name: 'Entrepreneurship',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
         icon: faLightbulb,
     },
     {
         name: 'Cloud Architecture',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
         icon: faCloud,
     },
     {
         name: 'Leadership',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
         icon: faUsers,
     },
     {
         name: 'Project Management',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
         icon: faTasks,
     },
 ];
@@ -54,16 +42,15 @@ export default function Skills() {
                 </div>
 
                 <div className="mt-10">
-                    <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
                         {skills.map((skill) => (
                             <div key={skill.name} className="relative">
-                                <dt>
+                                <dt className="flex items-center">
                                     <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                                         <FontAwesomeIcon icon={skill.icon} size="lg" color="white" aria-hidden="true" />
                                     </div>
-                                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{skill.name}</p>
+                                    <p className="ml-16 text-lg leading-6 text-gray-900">{skill.name}</p>
                                 </dt>
-                                <dd className="mt-2 ml-16 text-base text-gray-500">{skill.description}</dd>
                             </div>
                         ))}
                     </dl>

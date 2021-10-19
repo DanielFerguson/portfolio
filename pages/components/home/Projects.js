@@ -53,8 +53,7 @@ export default function Projects() {
                             Projects
                         </h2>
                         <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a
-                            scelerisque amet ullamcorper eu enim et fermentum, augue.
+                            From my work on the digital-first charity focusing on creating tools for preperations, duration and restoration in natural disasters, to creating innovative methods for valuing land which considers the the agricultural value to surrounding areas; there&apos;s never a challenge I won&apos;t take on.
                         </p>
                         <div className="mt-8 sm:flex">
                             <div className="rounded-md shadow">

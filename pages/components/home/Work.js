@@ -2,25 +2,25 @@ const jobs = [
     {
         title: 'Partner',
         employer: 'Grind Labs',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.',
+        description: 'Working with business to accelerate in their marketing, software development and branding journeys; aiding in brand creation, cloud adoption and understanding market potential for stakeholder-focused solutions.',
         timeline: 'Aug 2021 - Present'
     },
     {
         title: 'Chief Technology Officer',
         employer: 'WEC Administration',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.',
+        description: 'Leading the digital innovations for a multidisciplinary investment and education body; focusing on education, community and digital tools.',
         timeline: 'Mar 2021 - Present'
     },
     {
         title: 'President',
         employer: 'Helping Group',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.',
+        description: 'Founded the digital-first charity HelpingGroup, focusing on creating social impact initiatives to uplift the quality of life for people; nationally, and beyond the Australian borders.',
         timeline: 'Jan 2020 - Present'
     },
     {
         title: 'Software Engineer',
         employer: 'Centre for eResearch and Digital Innovation',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.',
+        description: 'Working as a full-stack engineer, working with clients to understand, analyise and develop technical solutions; including the creation of a data portal to enable collaboration for family violence preventative measures, developing an ingestion pipeline with machine learning in order to digitise and index a library of scanned environmental audit documents, and more.',
         timeline: 'Feb 2019 - Jan 2021'
     },
 ];
