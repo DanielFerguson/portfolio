@@ -33,7 +33,7 @@ export default function Contact() {
                                 <dt className="sr-only">Email</dt>
                                 <dd className="flex">
                                     <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
-                                    <span className="ml-3">gday@danferg.com</span>
+                                    <a href="mailto:gday@danferg.com" className="ml-3 text-indigo-500 font-medium">gday@danferg.com</a>
                                 </dd>
                             </div>
                         </dl>

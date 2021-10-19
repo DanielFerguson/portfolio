@@ -31,10 +31,13 @@ export default function Hero() {
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <a href="#">
                                             <span className="sr-only">Workflow</span>
-                                            <img
-                                                className="h-8 w-auto sm:h-10"
-                                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                                alt=""
+                                            <Image
+                                                src="/wave.png"
+                                                className="h-8 w-8"
+                                                layout="intrinsic"
+                                                height="50px"
+                                                width="50px"
+                                                alt="Wave"
                                             />
                                         </a>
                                         <div className="-mr-2 flex items-center md:hidden">
@@ -74,10 +77,13 @@ export default function Hero() {
                                 <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                                     <div className="px-5 pt-4 flex items-center justify-between">
                                         <div>
-                                            <img
-                                                className="h-8 w-auto"
-                                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                                alt=""
+                                            <Image
+                                                src="/wave.png"
+                                                className="h-8 w-8"
+                                                layout="intrinsic"
+                                                height="50px"
+                                                width="50px"
+                                                alt="Wave"
                                             />
                                         </div>
                                         <div className="-mr-2">

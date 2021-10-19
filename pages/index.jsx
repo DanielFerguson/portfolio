@@ -8,6 +8,7 @@ import Tools from './components/home/Tools';
 import Articles from './components/home/Articles';
 import Newsletter from './components/home/Newsletter';
 import Contact from './components/home/Contact';
+import Footer from './components/home/Footer';
 
 // Functionality
 // TODO: Add newsletter signup, add API route
@@ -29,6 +30,7 @@ export default function Home() {
       <Articles />
       {/* <Newsletter /> */}
       <Contact />
+      <Footer />
     </div>
   )
 }
