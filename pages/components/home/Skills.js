@@ -1,29 +1,42 @@
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBracketsCurly, faLayerGroup, faLightbulb, faCloud, faUsers, faTasks } from '@fortawesome/pro-regular-svg-icons'
 
 const skills = [
     {
-        name: 'Competitive exchange rates',
+        name: 'Software Development',
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: GlobeAltIcon,
+        icon: faBracketsCurly,
     },
     {
-        name: 'No hidden fees',
+        name: 'Solutions Architecture',
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: ScaleIcon,
+        icon: faLayerGroup,
     },
     {
-        name: 'Transfers are instant',
+        name: 'Entrepreneurship',
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: LightningBoltIcon,
+        icon: faLightbulb,
     },
     {
-        name: 'Mobile notifications',
+        name: 'Cloud Architecture',
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: AnnotationIcon,
+        icon: faCloud,
+    },
+    {
+        name: 'Leadership',
+        description:
+            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        icon: faUsers,
+    },
+    {
+        name: 'Project Management',
+        description:
+            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        icon: faTasks,
     },
 ];
 
@@ -46,7 +59,7 @@ export default function Skills() {
                             <div key={skill.name} className="relative">
                                 <dt>
                                     <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                                        <skill.icon className="h-6 w-6" aria-hidden="true" />
+                                        <FontAwesomeIcon icon={skill.icon} size="lg" color="white" aria-hidden="true" />
                                     </div>
                                     <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{skill.name}</p>
                                 </dt>

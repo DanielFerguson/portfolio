@@ -3,36 +3,36 @@ import Image from 'next/image'
 const posts = [
     {
         title: 'You are the product',
-        href: '/articles/you-are-the-product',
+        href: 'https://medium.com/@danferg/you-are-the-product-e76897b05e1',
         category: { name: 'Article', href: '#' },
         description:
             'The fallacy of ‘free’ has blinded us by and large to the fact that we are paying for it, just in ways we don’t immediately see.',
         date: 'Jan 02, 2021',
         datetime: '2021-01-02',
-        imageUrl: '/images/articles/spy.jpeg',
+        imageUrl: 'https://images.unsplash.com/photo-1565591452825-67d6b7df1d47?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3B5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
         readingTime: '6 min',
     },
     {
         title: 'A better, brighter, cleaner future.',
-        href: '/articles/a-better-brighter-cleaner-future',
+        href: 'https://medium.com/@danferg/a-better-brighter-cleaner-future-8e464c725f0',
         category: { name: 'Article', href: '#' },
         description:
             'Let me ask you this - where is your money at the moment? Your knee-jerk reaction may say ‘oh, it’s in the bank!’, but you money doesn’t live there. I won’t try and get into the complex nature of how banks reinvest and lend your money to recoup… you know what? I’m even bored now.',
         date: 'Dec 23, 2020',
         datetime: '2020-12-23',
-        imageUrl: '/images/articles/energy.jpeg',
-        readingTime: '4 min',
+        imageUrl: 'https://images.unsplash.com/photo-1522735338363-cc7313be0ae0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2luZCUyMGVuZXJneXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
+        readingTime: '3 min',
     },
     {
         title: 'Burnout; let\'s talk about it.',
-        href: '/articles/burnout-lets-talk-about-it',
+        href: 'https://medium.com/@danferg/burnout-lets-talk-about-it-c9d810e74eee',
         category: { name: 'Article', href: '#' },
         description:
             'This year has been the wildest, most productive, most humbling year of my life to date. A single idea has lit the way for the creation of some of what I think are the most ambition, long-needed and impactful initiatives Australia has seen in a while; at very least from such a young group of people.',
         date: 'Dev 13, 2020',
         datetime: '2020-12-13',
-        imageUrl: '/images/articles/alone.jpeg',
-        readingTime: '11 min',
+        imageUrl: 'https://images.unsplash.com/photo-1509923261489-fd580b2d9051?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9uZWx5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
+        readingTime: '3 min',
     },
 ]
 
@@ -52,21 +52,20 @@ export default function Articles() {
                         <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                             <div className="flex-shrink-0">
                                 <Image
-                                    className="h-48 w-full object-cover"
+                                    className="h-48 object-cover"
                                     src={post.imageUrl}
                                     alt=""
-                                    width={500}
-                                    height={500}
+                                    layout="responsive"
+                                    width="50"
+                                    height="30"
                                 />
                             </div>
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                                 <div className="flex-1">
                                     <p className="text-sm font-medium text-indigo-600">
-                                        <a href={post.category.href} className="hover:underline">
-                                            {post.category.name}
-                                        </a>
+                                        {post.category.name}
                                     </p>
-                                    <a href={post.href} className="block mt-2">
+                                    <a href={post.href} target="_blank" className="block mt-2">
                                         <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                                         <p className="mt-3 text-base text-gray-500">{post.description}</p>
                                     </a>
