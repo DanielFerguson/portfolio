@@ -11,11 +11,9 @@ import Contact from './components/home/Contact';
 // TODO: Update logo on the front page
 // TODO: Update text under My Projects
 // TODO: Update text under Skills
-// TODO: Update the logos for the projects, add their appropriate links
 // TODO: Fill in tools section
 
 // Functionality
-// TODO: Setup contact form with API
 // TODO: Add newsletter signup, add API route
 
 // Final
