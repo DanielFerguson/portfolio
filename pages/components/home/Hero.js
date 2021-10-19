@@ -31,7 +31,7 @@ export default function Hero() {
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <a href="#">
                                             <span className="sr-only">Workflow</span>
-                                            <Image
+                                            <img
                                                 className="h-8 w-auto sm:h-10"
                                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                                 alt=""
@@ -74,7 +74,7 @@ export default function Hero() {
                                 <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                                     <div className="px-5 pt-4 flex items-center justify-between">
                                         <div>
-                                            <Image
+                                            <img
                                                 className="h-8 w-auto"
                                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                                 alt=""
@@ -144,6 +144,7 @@ export default function Hero() {
                 <Image
                     className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
                     src="/snow.jpg"
+                    layout="fill"
                     alt=""
                 />
             </div>

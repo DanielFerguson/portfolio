@@ -5,6 +5,7 @@ import Articles from './components/home/Articles';
 import Newsletter from './components/home/Newsletter';
 import Contact from './components/home/Contact';
 
+// TODO: Update logo on the front page
 // TODO: Update text under My Projects
 // TODO: Update text under Skills
 // TODO: Add Google Analytics tracking

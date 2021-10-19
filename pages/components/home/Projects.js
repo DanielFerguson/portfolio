@@ -69,7 +69,7 @@ export default function Projects() {
                     <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                         {projects.map((project) =>
                             <div key={project.name} className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                                <Image
+                                <img
                                     className="max-h-12" src={project.icon} alt={project.name}
                                 />
                             </div>
