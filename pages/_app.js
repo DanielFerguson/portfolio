@@ -12,8 +12,8 @@ function App({ Component, pageProps }) {
 
 
   useEffect(() => {
-    Fathom.load('IHFUTVIS', {
-      includedDomains: ['danferg.com'],
+    Fathom.load('LARYKSES', {
+      includedDomains: ['danferg.com', 'www.danferg.com'],
     });
 
     function onRouteChangeComplete() {
