@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import Hero from './components/home/Hero';
 import Projects from './components/home/Projects';
 import Skills from './components/home/Skills';
@@ -13,6 +15,12 @@ import Contact from './components/home/Contact';
 export default function Home() {
   return (
     <div className="flex flex-col gap-32">
+      <Head>
+        <title>Your friendly neighbourhood social entrepreneur | Dan Ferg</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="A solutions architect and software developer with an understanding of holistic design; seeking to create digitally enabled change for good." />
+        <meta name="keywords" content="social,entrepreneur,solutions,architect,software,developer,holistic,design,digitally,enabled,change,good,helping,group,yoogle,real,news,land,index" />
+      </Head>
       <Hero />
       <Projects />
       <Work />
