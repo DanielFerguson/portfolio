@@ -3,19 +3,31 @@ const jobs = [
         title: 'Partner',
         employer: 'Grind Labs',
         description: 'Working with business to accelerate in their marketing, software development and branding journeys; aiding in brand creation, cloud adoption and understanding market potential for stakeholder-focused solutions.',
-        timeline: 'Aug 2021 - Present'
+        timeline: 'Aug 2021'
+    },
+    {
+        title: 'Founder',
+        employer: 'Aaiga',
+        description: 'Developing cutting-edge, privacy-first COVID-focused software solutions to help reduce the need for macro-lockdowns in order to return to normal, save lives and bring people together safely once more.',
+        timeline: 'Apr 2021'
     },
     {
         title: 'Chief Technology Officer',
         employer: 'WEC Administration',
         description: 'Leading the digital innovations for a multidisciplinary investment and education body; focusing on education, community and digital tools.',
-        timeline: 'Mar 2021 - Present'
+        timeline: 'Mar 2021'
+    },
+    {
+        title: 'Co-Founder & Advisor',
+        employer: 'Swinburne Leadership Hub',
+        description: 'Born from a chance coffee and shared frustration between two serial innovators, the Swinburne Leadership Hub unites innovators, thinkers & doers for a common purpose — to experiment, learn, and grow.',
+        timeline: 'Mar 2020'
     },
     {
         title: 'President',
         employer: 'Helping Group',
         description: 'Founded the digital-first charity HelpingGroup, focusing on creating social impact initiatives to uplift the quality of life for people; nationally, and beyond the Australian borders.',
-        timeline: 'Jan 2020 - Present'
+        timeline: 'Jan 2020'
     },
     {
         title: 'Software Engineer',
@@ -31,7 +43,7 @@ export default function Work() {
             <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
                 <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                     <div>
-                        <h2 className="text-3xl font-extrabold text-gray-900">Employment</h2>
+                        <h2 className="text-3xl font-extrabold text-gray-900">Employment &amp; Roles</h2>
                         <p className="mt-4 text-lg text-gray-500">
                             I&apos;ve had the pleasure of working on a number of exciting projects in various dynamic, fast-paced environments.
                         </p>
