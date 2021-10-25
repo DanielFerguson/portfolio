@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandsHelping, faUsers, faMapMarker, faTrafficLightGo, faSearch, faStarOfLife, faShield, faNewspaper, fak } from '@fortawesome/pro-regular-svg-icons'
+import { faHandsHelping, faUsers, faMapMarker, faTrafficLightGo, faLightbulbOn, faSearch, faStarOfLife, faShield, faNewspaper, fak } from '@fortawesome/pro-regular-svg-icons'
 
 const projects = [{
     name: 'Helping Group',
@@ -40,6 +40,11 @@ const projects = [{
     name: 'Stroke Rehab',
     icon: faStarOfLife,
     link: 'https://github.com/DanielFerguson/Stroke-Rehabilitation-Board'
+},
+{
+    name: 'Pegboard',
+    icon: faLightbulbOn,
+    link: 'https://pegboard.danferg.com'
 },
 ];
 
