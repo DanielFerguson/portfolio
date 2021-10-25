@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBracketsCurly, faLayerGroup, faLightbulb, faCloud, faUsers, faTasks } from '@fortawesome/pro-regular-svg-icons'
+import { faBracketsCurly, faLayerGroup, faLightbulbOn, faCloud, faUsers, faTasks, faCubes, faQuestion, faPodium } from '@fortawesome/pro-regular-svg-icons'
+
 
 const skills = [
     {
@@ -12,7 +13,7 @@ const skills = [
     },
     {
         name: 'Entrepreneurship',
-        icon: faLightbulb,
+        icon: faQuestion,
     },
     {
         name: 'Cloud Architecture',
@@ -25,6 +26,18 @@ const skills = [
     {
         name: 'Project Management',
         icon: faTasks,
+    },
+    {
+        name: 'Business Analysis',
+        icon: faCubes,
+    },
+    {
+        name: 'Ideation',
+        icon: faLightbulbOn,
+    },
+    {
+        name: 'Presentation & Delivery',
+        icon: faPodium,
     },
 ];
 
