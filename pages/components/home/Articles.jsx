@@ -48,7 +48,7 @@ export default function Articles() {
                     </p>
                     <div className="mt-3 mx-auto text-gray-500 flex flex-col items-center justify-center">
                         <p>If you are interested, you can follow my learning journey on my Dev Diary</p>
-                        <a href="https://pickle-twilight-95b.notion.site/Dev-Diary-feb42737f63a456487d5193eb675ed17" target="_blank" rel="noopener noreferrer" className="flex mx-auto mt-6 items-center text-sm px-3 py-3 rounded shadow-lg">
+                        <a href="https://dev-diary.notion.site" target="_blank" rel="noopener noreferrer" className="flex mx-auto mt-6 items-center text-sm px-3 py-3 rounded shadow-lg">
                             <img src="/notion.svg" alt="Notion" className="h-8 w-8" />
                             <span className="pl-3">📕 Dev Diary</span>
                         </a>
