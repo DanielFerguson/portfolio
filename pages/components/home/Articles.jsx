@@ -38,14 +38,21 @@ const posts = [
 
 export default function Articles() {
     return (
-        <div id="articles" className="relative px-4 sm:px-6 lg:px-8">
-            <div className="relative max-w-7xl mx-auto">
+        <div id="articles" className="px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">And every now and then I like to write. </h2>
                     <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                         It’s a great way to share knowledge, remember how far we&apos;ve come and
                         create dialogue on topics that interest me or are near to my heart.
                     </p>
+                    <div className="mt-3 mx-auto text-gray-500 flex flex-col items-center justify-center">
+                        <p>If you are interested, you can follow my learning journey on my Dev Diary</p>
+                        <a href="https://pickle-twilight-95b.notion.site/Dev-Diary-feb42737f63a456487d5193eb675ed17" target="_blank" rel="noopener noreferrer" className="flex mx-auto mt-6 items-center text-sm px-3 py-3 rounded shadow-lg">
+                            <img src="/notion.svg" alt="Notion" className="h-8 w-8" />
+                            <span className="pl-3">📕 Dev Diary</span>
+                        </a>
+                    </div>
                 </div>
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                     {posts.map((post) => (
