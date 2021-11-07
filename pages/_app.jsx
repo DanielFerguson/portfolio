@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import * as Fathom from 'fathom-client';
+import Router from 'next/router';
+import { load, trackPageview } from 'fathom-client';
 
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
@@ -11,24 +11,16 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-function App({ Component, pageProps }) {
-  const router = useRouter();
+// Record a pageview when route changes
+Router.events.on('routeChangeComplete', () => {
+  trackPageview();
+});
 
+function App({ Component, pageProps }) {
   useEffect(() => {
-    Fathom.load('LARYKSES', {
+    load('LARYKSES', {
       includedDomains: ['danferg.com', 'www.danferg.com'],
     });
-
-    function onRouteChangeComplete() {
-      Fathom.trackPageview();
-    }
-    // Record a pageview when route changes
-    router.events.on('routeChangeComplete', onRouteChangeComplete);
-
-    // Unassign event listener
-    return () => {
-      router.events.off('routeChangeComplete', onRouteChangeComplete);
-    };
   }, []);
 
   return <Component {...pageProps} />;

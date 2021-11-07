@@ -1,5 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandsHelping, faUsers, faMapMarker, faTrafficLightGo, faLightbulbOn, faSearch, faStarOfLife, faShield, faNewspaper, fak } from '@fortawesome/pro-regular-svg-icons'
+import * as Fathom from 'fathom-client';
+
+const viewProject = () => {
+    Fathom.trackGoal('WZN8LWT6', 0);
+};
+
+const viewGithub = () => {
+    Fathom.trackGoal('VVGVXI95', 0);
+};
 
 const projects = [{
     name: 'Helping Group',
@@ -63,6 +72,7 @@ export default function Projects() {
                         <div className="mt-8 sm:flex">
                             <div className="rounded-md shadow">
                                 <a
+                                    onClick={viewGithub}
                                     href="https://github.com/danielferguson"
                                     target="_blank"
                                     rel="noreferrer"
@@ -75,7 +85,7 @@ export default function Projects() {
                     </div>
                     <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                         {projects.map((project) =>
-                            <a href={project.link} key={project.name} target="_blank" rel="noreferrer" className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 items-center">
+                            <a onClick={viewProject} href={project.link} key={project.name} target="_blank" rel="noreferrer" className="col-span-1 flex justify-center py-8 px-8 bg-gray-50 items-center">
                                 <FontAwesomeIcon icon={project.icon} size="2x" className="text-gray-500" /> <span className="pl-3 font-medium text-kg text-gray-600">{project.name}</span>
                             </a>
                         )}

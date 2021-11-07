@@ -1,6 +1,14 @@
 import Image from 'next/image';
 import { MailIcon, GlobeIcon } from '@heroicons/react/outline'
+import * as Fathom from 'fathom-client';
 
+const clickMailto = () => {
+    Fathom.trackGoal('YJTPQQS1', 0);
+};
+
+const followLinkedIn = () => {
+    Fathom.trackGoal('3605TOVV', 0);
+};
 
 export default function Contact() {
     return (
@@ -34,12 +42,12 @@ export default function Contact() {
                                 <dt className="sr-only">Email</dt>
                                 <dd className="flex">
                                     <MailIcon className="flex-shrink-0 h-6 w-6 text-white lg:text-gray-400" aria-hidden="true" />
-                                    <a href="mailto:gday@danferg.com" className="ml-3 text-white lg:text-indigo-500 font-medium">gday@danferg.com</a>
+                                    <a onClick={clickMailto} href="mailto:gday@danferg.com" className="ml-3 text-white lg:text-indigo-500 font-medium">gday@danferg.com</a>
                                 </dd>
                                 <dt className="sr-only">LinkedIn</dt>
                                 <dd className="flex mt-2">
                                     <GlobeIcon className="flex-shrink-0 h-6 w-6 text-white lg:text-gray-400" aria-hidden="true" />
-                                    <a href="https://linkedin.com/in/danferg" target="_blank" rel="noopener noreferrer" className="ml-3 text-white lg:text-indigo-500 font-medium">LinkedIn</a>
+                                    <a onClick={followLinkedIn} href="https://linkedin.com/in/danferg" target="_blank" rel="noopener noreferrer" className="ml-3 text-white lg:text-indigo-500 font-medium">LinkedIn</a>
                                 </dd>
                             </div>
                         </dl>
