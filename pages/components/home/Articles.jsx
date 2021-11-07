@@ -40,11 +40,15 @@ const posts = [
   },
 ];
 
-const viewDevDiary = () => {
+const FollowDevDiaryLink = () => {
   Fathom.trackGoal("CLGZI8C0", 0);
 };
 
-const viewArticle = () => {
+const FollowMediumLink = () => {
+  Fathom.trackGoal("W2O0MKW3", 0);
+};
+
+const FollowArticleLink = () => {
   Fathom.trackGoal("8YSBTM5M", 0);
 };
 
@@ -67,7 +71,7 @@ export default function Articles() {
               Dev Diary
             </p>
             <a
-              onClick={viewDevDiary}
+              onClick={FollowDevDiaryLink}
               href="https://dev-diary.notion.site"
               target="_blank"
               rel="noopener noreferrer"
@@ -100,7 +104,7 @@ export default function Articles() {
                     {post.category}
                   </p>
                   <a
-                    onClick={viewArticle}
+                    onClick={FollowArticleLink}
                     href={post.href}
                     target="_blank"
                     rel="noreferrer"
@@ -128,8 +132,8 @@ export default function Articles() {
         <div className="mt-4">
           <div className="mx-auto text-gray-500 flex flex-col items-center justify-center">
             <a
-              onClick={viewDevDiary}
-              href="https://dev-diary.notion.site"
+              onClick={FollowMediumLink}
+              href="https://medium.com/@danferg"
               target="_blank"
               rel="noopener noreferrer"
               className="flex mx-auto mt-6 items-center text-sm px-3 py-3 rounded shadow-lg"
