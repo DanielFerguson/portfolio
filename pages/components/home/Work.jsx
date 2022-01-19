@@ -5,8 +5,12 @@ const jobs = [
     description:
       "Working with business to accelerate in their marketing, software development and branding journeys; aiding in brand creation, cloud adoption and understanding market potential for stakeholder-focused solutions.",
     timeline: "Aug 2021",
-    href: [],
-    websites: [],
+    websites: [
+      {
+        name: 'grindlabs.com.au',
+        href: 'https://grindlabs.com.au'
+      }
+    ],
   },
   {
     title: "Founder",
@@ -28,6 +32,10 @@ const jobs = [
       "Leading the digital innovations for a multidisciplinary investment and education body; focusing on education, community and digital tools.",
     timeline: "Mar 2021",
     websites: [
+      {
+        name: "imperialwealth.com",
+        href: "https://imperialwealth.com",
+      },
       {
         name: "miningstore.com.au",
         href: "https://miningstore.com.au",
