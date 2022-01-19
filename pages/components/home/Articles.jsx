@@ -61,26 +61,10 @@ export default function Articles() {
             And every now and then I like to write.{" "}
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            It’s a great way to share knowledge, remember how far we&apos;ve
+            It&apos;s a great way to share knowledge, remember how far we&apos;ve
             come and create dialogue on topics that interest me or are near to
             my heart.
           </p>
-          <div className="mt-3 mx-auto text-gray-500 flex flex-col items-center justify-center">
-            <p>
-              If you are interested, you can follow my learning journey on my
-              Dev Diary
-            </p>
-            <a
-              onClick={FollowDevDiaryLink}
-              href="https://dev-diary.notion.site"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex mx-auto mt-6 items-center text-sm px-3 py-3 rounded shadow-lg"
-            >
-              <img src="/notion.svg" alt="Notion" className="h-8 w-8" />
-              <span className="pl-3">📕 Dev Diary</span>
-            </a>
-          </div>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {posts.map((post) => (
