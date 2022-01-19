@@ -1,6 +1,6 @@
 const jobs = [
   {
-    title: "Partner",
+    title: "Managing Director",
     employer: "Grind Labs",
     description:
       "Working with business to accelerate in their marketing, software development and branding journeys; aiding in brand creation, cloud adoption and understanding market potential for stakeholder-focused solutions.",
