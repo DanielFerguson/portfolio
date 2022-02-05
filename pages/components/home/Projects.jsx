@@ -96,7 +96,7 @@ export default function Projects() {
               considers the the agricultural value to surrounding areas;
               there&apos;s never a challenge I won&apos;t take on.
             </p>
-            <div className="mt-8 sm:flex">
+            {/* <div className="mt-8 sm:flex">
               <div className="rounded-md shadow">
                 <a
                   onClick={FollowGithub}
@@ -108,7 +108,7 @@ export default function Projects() {
                   View more
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
             {projects.map((project) => (
