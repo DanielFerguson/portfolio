@@ -10,6 +10,7 @@ import {
   faShield,
   faNewspaper,
   faQuestion,
+  faStore,
 } from "@fortawesome/pro-regular-svg-icons";
 import * as Fathom from "fathom-client";
 
@@ -41,6 +42,11 @@ const projects = [
     name: "Guardian",
     icon: faShield,
     link: "https://useguardian.app",
+  },
+  {
+    name: "Support Them",
+    icon: faStore,
+    link: "https://supportthem.com.au",
   },
   {
     name: "Innovative Land Index",
