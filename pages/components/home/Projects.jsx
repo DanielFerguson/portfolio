@@ -9,7 +9,7 @@ import {
   faStarOfLife,
   faShield,
   faNewspaper,
-  fak,
+  faQuestion,
 } from "@fortawesome/pro-regular-svg-icons";
 import * as Fathom from "fathom-client";
 
@@ -28,19 +28,24 @@ const projects = [
     link: "https://helping.group",
   },
   {
+    name: 'yFocus',
+    icon: faQuestion,
+    link: 'https://yfocus.app'
+  },
+  {
     name: "Swin Lead",
     icon: faUsers,
     link: "https://swinlead.com",
   },
   {
-    name: "Innovative Land Index",
-    icon: faMapMarker,
-    link: "https://innovative-land-index.vercel.app",
-  },
-  {
     name: "Guardian",
     icon: faShield,
     link: "https://useguardian.app",
+  },
+  {
+    name: "Innovative Land Index",
+    icon: faMapMarker,
+    link: "https://innovative-land-index.vercel.app",
   },
   {
     name: "Real News",
