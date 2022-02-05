@@ -35,7 +35,7 @@ const projects = [
   {
     name: "Innovative Land Index",
     icon: faMapMarker,
-    link: "https://land-index.danferg.com",
+    link: "https://innovative-land-index.vercel.app",
   },
   {
     name: "Guardian",
