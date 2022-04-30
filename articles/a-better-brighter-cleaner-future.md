@@ -1,13 +1,12 @@
 ---
-title: A better, brighter, cleaner future.
-excerpt: I believe that you have a powerful voice. One of the ways you can be clearly clearly heard is through how you chose to spend your money.
-published: 19-10-2021
-featured-image: https://images.unsplash.com/photo-1586071921485-4c493567232c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+title: "A better, brighter, cleaner future."
+excerpt: "I believe that you have a powerful voice. One of the ways you can be clearly clearly heard is through how you chose to spend your money."
+published: "2020-12-23"
+category: "Article"
+featuredImage: https://images.unsplash.com/photo-1522735338363-cc7313be0ae0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2luZCUyMGVuZXJneXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80
 ---
 
 # A better, brighter, cleaner future.
-
-![Photo by RawFilm on Unsplash](https://images.unsplash.com/photo-1586071921485-4c493567232c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80 "A field of windmills")
 
 ## The issue at hand
 

@@ -1,8 +1,9 @@
 ---
-title: Welcome, to Website v3!
-excerpt: Why? Well, the last one was a little outdated, lacked imagination and And was built for a different purpose. I wanted to expand my experience with web technologies.
-published: 19-10-2021
-featured-image: https://images.unsplash.com/photo-1586071921485-4c493567232c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+title: "Welcome, to Website v3!"
+excerpt: "Why? Well, the last one was a little outdated, lacked imagination and And was built for a different purpose. I wanted to expand my experience with web technologies."
+published: "2019-11-20"
+category: "Article"
+featuredImage: https://images.unsplash.com/photo-1586071921485-4c493567232c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
 ---
 
 # Welcome, to Website v3!

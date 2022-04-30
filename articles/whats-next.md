@@ -1,8 +1,9 @@
 ---
-title: What’s next?
-excerpt:
-published: 19-10-2021
-featured-image: https://images.unsplash.com/photo-1491555103944-7c647fd857e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+title: "What’s next?"
+excerpt: "The definitive decade — pretty much a waste of an invaluable chance so far."
+published: "2021-11-09"
+category: "Article"
+featuredImage: https://images.unsplash.com/photo-1609537937459-9a2e947cb16c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80
 ---
 
 # What’s next?

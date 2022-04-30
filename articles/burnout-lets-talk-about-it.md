@@ -1,11 +1,10 @@
 ---
-title: Burnout; let’s talk about it.
-excerpt: This year has been the wildest, most productive, most humbling year of my life to date. I completely burned out, and it sucked. Let's talk about it.
-published: 19-10-2021
-featured-image: https://images.unsplash.com/photo-1509923261489-fd580b2d9051?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80
+title: "Burnout; let’s talk about it."
+excerpt: "This year has been the wildest, most productive, most humbling year of my life to date. I completely burned out, and it sucked. Let's talk about it."
+published: "2021-10-19"
+category: "Article"
+featuredImage: https://images.unsplash.com/photo-1509923261489-fd580b2d9051?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80
 ---
-
-![Photo by Lukas Rychvalsky on Unsplash](https://images.unsplash.com/photo-1509923261489-fd580b2d9051?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80 "A man looking out on a lake, alone")
 
 ## Preface
 

@@ -1,8 +1,9 @@
 ---
-title: You are the product.
-excerpt: We live in a world surrounded by ‘free’. Free shipping, free software, etc. However — all of these things boil down to the need to make a profit.
-published: 19-10-2021
-featured-image: https://images.unsplash.com/photo-1650172452637-8a1c183f2524?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3VydmFpbGxhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
+title: "You are the product."
+excerpt: "We live in a world surrounded by ‘free’. Free shipping, free software, etc. However — all of these things boil down to the need to make a profit."
+published: "2021-01-02"
+category: "Article"
+featuredImage: https://images.unsplash.com/photo-1565591452825-67d6b7df1d47?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3B5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80
 ---
 
 # You are the product.
