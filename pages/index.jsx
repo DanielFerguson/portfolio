@@ -1,10 +1,11 @@
 import Head from "next/head";
+import axios from "axios";
 import fs from "fs";
 import dayjs from "dayjs";
 import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import * as Fathom from "fathom-client";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -125,7 +126,7 @@ const jobs = [
     title: "Founder",
     employer: "Aaiga",
     description:
-      "Developing cutting-edge, privacy-first COVID-focused software solutions to help reduce the need for macro-lockdowns in order to return to normal, save lives and bring people together safely once more.",
+      "Developing cutting-edge software and helping startups realise their value and accelerate their journey.",
     timeline: "Apr 2021",
     websites: [
       {
@@ -145,14 +146,14 @@ const jobs = [
         name: "imperialwealth.com",
         href: "https://imperialwealth.com",
       },
-      {
-        name: "miningstore.com.au",
-        href: "https://miningstore.com.au",
-      },
-      {
-        name: "thecashkings.com.au",
-        href: "https://thecashkings.com.au",
-      },
+      // {
+      //   name: "miningstore.com.au",
+      //   href: "https://miningstore.com.au",
+      // },
+      // {
+      //   name: "thecashkings.com.au",
+      //   href: "https://thecashkings.com.au",
+      // },
     ],
   },
   {
@@ -277,6 +278,23 @@ const description =
   "A solutions architect and software developer with an understanding of holistic design; seeking to create digitally enabled change for good.";
 
 const Home = ({ articles }) => {
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState("IDLE");
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const subscribe = async () => {
+    setState("LOADING");
+    setErrorMessage(null);
+
+    try {
+      const response = await axios.post("/api/subscribe", { email });
+      setState("SUCCESS");
+    } catch (e) {
+      setErrorMessage(e);
+      setState("ERROR");
+    }
+  };
+
   return (
     <>
       <Head>
@@ -323,7 +341,7 @@ const Home = ({ articles }) => {
                     <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                       <div className="flex items-center justify-between w-full md:w-auto">
                         <a href="#">
-                          <span className="sr-only">Workflow</span>
+                          <span className="sr-only">Dan Ferg</span>
                           <Image
                             src="/wave.png"
                             className="h-8 w-8"
@@ -422,7 +440,7 @@ const Home = ({ articles }) => {
                       Your friendly neighbourhood
                     </span>{" "}
                     <span className="block text-indigo-600 xl:inline">
-                      social entrepreneur
+                      entrepreneur
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
@@ -461,6 +479,75 @@ const Home = ({ articles }) => {
             />
           </div>
         </div>
+
+        {/* CTA */}
+        {(state === "IDLE" || state === "ERROR") && (
+          <div className="bg-white">
+            <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+              <div className="px-6 py-6 bg-indigo-700 rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
+                <div className="xl:w-0 xl:flex-1">
+                  <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+                    Want the resources from Concept to Production?
+                  </h2>
+                  <p className="mt-3 max-w-3xl text-lg leading-6 text-indigo-200">
+                    I&apos;m sending them out soon! I&apos;m writing a few
+                    extension articles delving deeper into each topic.
+                  </p>
+                </div>
+                <div className="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
+                  <form className="sm:flex">
+                    <label htmlFor="email-address" className="sr-only">
+                      Email address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      required
+                      className="w-full border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white rounded-md"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button
+                      type="submit"
+                      disabled={state === "LOADING"}
+                      onClick={subscribe}
+                      className="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent shadow text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
+                    >
+                      {state === "LOADING" ? "Loading" : "Subscribe"}
+                    </button>
+                  </form>
+                  <p className="mt-3 text-sm text-indigo-200">
+                    {state === "ERROR"
+                      ? "Did you forget to add your email?"
+                      : "I wont spam you, promise. ❤️ Unsub anytime."}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        {state === "SUCCESS" && (
+          <div className="bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center">
+                <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">
+                  Thank you!
+                </h2>
+                <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+                  Welcome to the team.
+                </p>
+                <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+                  Soon, you&apos;ll recieve all of the resources from Concept to
+                  Production, plus be notified when I release articles on
+                  startups, entrepreneurship and more.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Projects */}
         <div id="projects">
