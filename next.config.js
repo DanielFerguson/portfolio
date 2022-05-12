@@ -4,6 +4,6 @@ module.exports = {
     domains: ["images.unsplash.com"],
   },
   serverRuntimeConfig: {
-    staticFolder: "/articles",
+    articlesFolder: "/articles",
   },
 };

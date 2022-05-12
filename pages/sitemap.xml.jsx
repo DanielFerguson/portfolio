@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import getConfig from "next/config";
+
+const { serverRuntimeConfig } = getConfig();
 
 const Sitemap = () => {};
 
@@ -31,7 +34,11 @@ export const getServerSideProps = async ({ res }) => {
       return `${baseUrl}/${staticPagePath}`;
     });
 
+  console.log(serverRuntimeConfig.articlesFolder);
+  const articles = fs.readdirSync(serverRuntimeConfig.articlesFolder);
+
   console.log(staticPages);
+  console.log(articles);
 
   //   const articles = files.map((fileName) => {
   //     const slug = fileName.replace(".md", "");
