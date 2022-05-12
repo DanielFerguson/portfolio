@@ -1,4 +1,5 @@
 ---
+slug: "burnout-lets-talk-about-it"
 title: "Burnout; let’s talk about it."
 excerpt: "This year has been the wildest, most productive, most humbling year of my life to date. I completely burned out, and it sucked. Let's talk about it."
 published: "2021-10-19"

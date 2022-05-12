@@ -1,4 +1,5 @@
 ---
+slug: "whats-next"
 title: "What’s next?"
 excerpt: "The definitive decade — pretty much a waste of an invaluable chance so far."
 published: "2021-11-09"

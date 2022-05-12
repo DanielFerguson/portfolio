@@ -1,13 +1,12 @@
-import Head from "next/head";
 import Image from "next/image";
-import fs from "fs";
 import md from "markdown-it";
-import matter from "gray-matter";
-import Footer from "../components/footer";
+import Footer from "@/components/footer";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import { getArticleBySlug, getArticleNames } from "@/lib/articles";
+import { NextSeo, ArticleJsonLd } from "next-seo";
 
 const navigation = [
   { name: "Projects", href: "/#projects" },
@@ -16,27 +15,45 @@ const navigation = [
   { name: "Articles", href: "/#articles" },
 ];
 
-const Article = ({ frontmatter, content }) => {
+const Article = ({ frontmatter, content, slug }) => {
   return (
     <>
-      <Head>
-        <title>{frontmatter.title} | Dan Ferg</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta name="description" content={frontmatter.excerpt} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://danferg.com" />
-        <meta property="og:title" content={`${frontmatter.title} | Dan Ferg`} />
-        <meta property="og:description" content={frontmatter.excerpt} />
-        <meta property="og:image" content={frontmatter.featuredImage} />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://danferg.com/" />
-        <meta
-          property="twitter:title"
-          content={`${frontmatter.title} | Dan Ferg`}
-        />
-        <meta property="twitter:description" content={frontmatter.excerpt} />
-        <meta property="twitter:image" content={frontmatter.featuredImage} />
-      </Head>
+      <NextSeo
+        title={frontmatter.title}
+        titleTemplate="%s | Dan Ferg"
+        description={frontmatter.excerpt}
+        canonical={`https://danferg.com/articles/${slug}`}
+        openGraph={{
+          type: "article",
+          url: `https://danferg.com/articles/${slug}`,
+          title: frontmatter.title,
+          description: frontmatter.excerpt,
+          article: {
+            publishedTime: frontmatter.published,
+            modifiedTime: frontmatter.published,
+            section: frontmatter.category,
+            authors: ["Daniel Ferguson"],
+            tags: [],
+          },
+          images: [{ url: frontmatter.featuredImage, alt: frontmatter.title }],
+          site_name: "DanFerg",
+        }}
+        twitter={{
+          handle: "@thedannyferg",
+          cardType: "summary_large_image",
+        }}
+      />
+      <ArticleJsonLd
+        url={`https://danferg.com/articles/${slug}`}
+        title={frontmatter.title}
+        images={[{ url: frontmatter.featuredImage, alt: frontmatter.title }]}
+        datePublished={frontmatter.published}
+        dateModified={frontmatter.published}
+        authorName={["Dan Ferguson"]}
+        publisherName="Dan Ferg"
+        publisherLogo="https://danferg.com/wave.png"
+        description={frontmatter.excerpt}
+      />
 
       <div className="flex flex-col gap-16">
         {/* Hero */}
@@ -179,11 +196,11 @@ const Article = ({ frontmatter, content }) => {
 };
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("articles");
+  const articleNames = getArticleNames();
 
-  const paths = files.map((fileName) => ({
+  const paths = articleNames.map((name) => ({
     params: {
-      slug: fileName.replace(".md", ""),
+      slug: name,
     },
   }));
 
@@ -194,13 +211,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const fileName = fs.readFileSync(`articles/${slug}.md`, "utf-8");
-  const { data: frontmatter, content } = matter(fileName);
+  const { frontmatter, content } = getArticleBySlug(slug);
 
   return {
     props: {
       frontmatter,
       content,
+      slug,
     },
   };
 }

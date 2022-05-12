@@ -1,14 +1,21 @@
 import { NextSeo, SocialProfileJsonLd } from "next-seo";
-import axios from "axios";
 import fs from "fs";
 import dayjs from "dayjs";
 import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import * as Fathom from "fathom-client";
 import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import {
+  MenuIcon,
+  XIcon,
+  PaperAirplaneIcon,
+  BeakerIcon,
+  BriefcaseIcon,
+  NewspaperIcon,
+  PhoneIcon,
+} from "@heroicons/react/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHandsHelping,
@@ -40,17 +47,20 @@ import {
   faJira,
   faHubspot,
 } from "@fortawesome/free-brands-svg-icons";
-import Footer from "./components/footer";
+import Footer from "@/components/footer";
+import Newsletter from "@/components/newsletter";
 
 const FollowProject = () => {
   Fathom.trackGoal("WZN8LWT6", 0);
 };
 
 const navigation = [
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Articles", href: "#articles" },
+  { name: "Projects", href: "#projects", icon: PaperAirplaneIcon },
+  { name: "Work", href: "#work", icon: BriefcaseIcon },
+  { name: "Skills", href: "#skills", icon: BeakerIcon },
+  { name: "Articles", href: "/articles", icon: NewspaperIcon },
 ];
+
 const projects = [
   {
     name: "Helping Group",
@@ -279,23 +289,6 @@ const description =
   "A solutions architect and software developer with an understanding of holistic design; seeking to create digitally enabled change for good.";
 
 const Home = ({ articles }) => {
-  const [email, setEmail] = useState("");
-  const [state, setState] = useState("IDLE");
-  const [errorMessage, setErrorMessage] = useState(null);
-
-  const subscribe = async () => {
-    setState("LOADING");
-    setErrorMessage(null);
-
-    try {
-      const response = await axios.post("/api/subscribe", { email });
-      setState("SUCCESS");
-    } catch (e) {
-      setErrorMessage(e);
-      setState("ERROR");
-    }
-  };
-
   return (
     <>
       <NextSeo
@@ -409,42 +402,61 @@ const Home = ({ articles }) => {
                     focus
                     className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
                   >
-                    <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                      <div className="px-5 pt-4 flex items-center justify-between">
-                        <div>
-                          <Image
-                            src="/wave.png"
-                            className="h-8 w-8"
-                            layout="intrinsic"
-                            height="50px"
-                            width="50px"
-                            alt="Wave"
-                          />
+                    <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                      <div className="pt-5 pb-6 px-5">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <Image
+                              className="h-8 w-auto"
+                              width="50"
+                              height="50"
+                              src="/wave.png"
+                              alt="Dan Ferg"
+                            />
+                          </div>
+                          <div className="-mr-2">
+                            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                              <span className="sr-only">Close menu</span>
+                              <XIcon className="h-6 w-6" aria-hidden="true" />
+                            </Popover.Button>
+                          </div>
                         </div>
-                        <div className="-mr-2">
-                          <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                            <span className="sr-only">Close main menu</span>
-                            <XIcon className="h-6 w-6" aria-hidden="true" />
-                          </Popover.Button>
+                        <div className="mt-6">
+                          <nav className="grid gap-4">
+                            {navigation.map((item) => (
+                              <a
+                                key={item.name}
+                                href={item.href}
+                                className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                              >
+                                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                                  <item.icon
+                                    className="h-6 w-6"
+                                    aria-hidden="true"
+                                  />
+                                </div>
+                                <div className="ml-4 text-base font-medium text-gray-900">
+                                  {item.name}
+                                </div>
+                              </a>
+                            ))}
+                            <a
+                              href="#contact"
+                              className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                            >
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                                <PhoneIcon
+                                  className="h-6 w-6"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                              <div className="ml-4 text-base font-medium text-gray-900">
+                                Contact
+                              </div>
+                            </a>
+                          </nav>
                         </div>
                       </div>
-                      <div className="px-2 pt-2 pb-3 space-y-1">
-                        {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </a>
-                        ))}
-                      </div>
-                      <a
-                        href="#contact"
-                        className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
-                      >
-                        Contact
-                      </a>
                     </div>
                   </Popover.Panel>
                 </Transition>
@@ -498,73 +510,7 @@ const Home = ({ articles }) => {
         </div>
 
         {/* CTA */}
-        {(state === "IDLE" || state === "ERROR") && (
-          <div className="bg-white">
-            <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
-              <div className="px-6 py-6 bg-indigo-700 rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
-                <div className="xl:w-0 xl:flex-1">
-                  <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-                    Want the resources from Concept to Production?
-                  </h2>
-                  <p className="mt-3 max-w-3xl text-lg leading-6 text-indigo-200">
-                    I&apos;m sending them out soon! I&apos;m writing a few
-                    extension articles delving deeper into each topic.
-                  </p>
-                </div>
-                <div className="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
-                  <form className="sm:flex">
-                    <label htmlFor="email-address" className="sr-only">
-                      Email address
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      required
-                      className="w-full border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white rounded-md"
-                      placeholder="Enter your email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <button
-                      type="submit"
-                      disabled={state === "LOADING"}
-                      onClick={subscribe}
-                      className="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent shadow text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
-                    >
-                      {state === "LOADING" ? "Loading" : "Subscribe"}
-                    </button>
-                  </form>
-                  <p className="mt-3 text-sm text-indigo-200">
-                    {state === "ERROR"
-                      ? "Did you forget to add your email?"
-                      : "I wont spam you, promise. ❤️ Unsub anytime."}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-        {state === "SUCCESS" && (
-          <div className="bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">
-                  Thank you!
-                </h2>
-                <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-                  Welcome to the team.
-                </p>
-                <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-                  Soon, you&apos;ll recieve all of the resources from Concept to
-                  Production, plus be notified when I release articles on
-                  startups, entrepreneurship and more.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
+        <Newsletter />
 
         {/* Projects */}
         <div id="projects">

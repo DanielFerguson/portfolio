@@ -1,4 +1,5 @@
 ---
+slug: "welcome-to-website-v3"
 title: "Welcome, to Website v3!"
 excerpt: "Why? Well, the last one was a little outdated, lacked imagination and And was built for a different purpose. I wanted to expand my experience with web technologies."
 published: "2019-11-20"

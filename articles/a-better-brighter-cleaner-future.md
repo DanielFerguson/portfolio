@@ -1,4 +1,5 @@
 ---
+slug: "a-better-brighter-cleaner-future"
 title: "A better, brighter, cleaner future."
 excerpt: "I believe that you have a powerful voice. One of the ways you can be clearly clearly heard is through how you chose to spend your money."
 published: "2020-12-23"

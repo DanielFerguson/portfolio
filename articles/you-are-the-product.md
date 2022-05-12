@@ -1,4 +1,5 @@
 ---
+slug: "you-are-the-product"
 title: "You are the product."
 excerpt: "We live in a world surrounded by ‘free’. Free shipping, free software, etc. However — all of these things boil down to the need to make a profit."
 published: "2021-01-02"
