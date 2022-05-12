@@ -35,7 +35,7 @@ export const getServerSideProps = async ({ res }) => {
 
   const articles = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(`articles/${fileName}`, "utf-8");
+    const readFile = fs.readFileSync(`${articlesDir}/${fileName}`, "utf-8");
     const { data: frontmatter } = matter(readFile);
 
     return {
