@@ -35,7 +35,6 @@ export const getServerSideProps = async ({ res }) => {
         "sitemap.xml.jsx",
       ].includes(staticPage);
     })
-    .push("/")
     .map((staticPagePath) => {
       return `${baseUrl}/${staticPagePath}`;
     });
@@ -58,9 +57,15 @@ export const getServerSideProps = async ({ res }) => {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        ${staticPages
-          .map((url) => {
-            return `
+              <url>
+                <loc>https://danferg.com</loc>
+                <lastmod>${new Date().toISOString()}</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+      ${staticPages
+        .map((url) => {
+          return `
               <url>
                 <loc>${url.replace(".jsx", "").replace("index", "")}</loc>
                 <lastmod>${new Date().toISOString()}</lastmod>
@@ -68,8 +73,8 @@ export const getServerSideProps = async ({ res }) => {
                 <priority>1.0</priority>
               </url>
             `;
-          })
-          .join("")}
+        })
+        .join("")}
               ${articles
                 .map(({ slug, frontmatter }) => {
                   return `
