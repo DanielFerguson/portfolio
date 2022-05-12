@@ -46,13 +46,13 @@ const Article = ({ frontmatter, content, slug }) => {
       <ArticleJsonLd
         url={`https://danferg.com/articles/${slug}`}
         title={frontmatter.title}
-        images={[{ url: frontmatter.featuredImage, alt: frontmatter.title }]}
+        description={frontmatter.excerpt}
+        images={[frontmatter.featuredImage]}
         datePublished={frontmatter.published}
         dateModified={frontmatter.published}
-        authorName={["Dan Ferguson"]}
+        authorName="Daniel Ferguson"
         publisherName="Dan Ferg"
         publisherLogo="https://danferg.com/wave.png"
-        description={frontmatter.excerpt}
       />
 
       <div className="flex flex-col gap-16">
