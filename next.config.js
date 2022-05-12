@@ -3,7 +3,5 @@ module.exports = {
   images: {
     domains: ["images.unsplash.com"],
   },
-  serverRuntimeConfig: {
-    articlesFolder: "/articles",
-  },
+  webpack5: false,
 };

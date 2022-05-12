@@ -8,34 +8,33 @@ const { serverRuntimeConfig } = getConfig();
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
-  const baseUrl = {
-    development: "http://localhost:3000",
-    production: "https://danferg.com",
-  }[process.env.NODE_ENV];
+  //   const baseUrl = {
+  //     development: "http://localhost:3000",
+  //     production: "https://danferg.com",
+  //   }[process.env.NODE_ENV];
 
-  const staticPages = fs
-    .readdirSync(
-      {
-        development: "pages",
-        production: "./",
-      }[process.env.NODE_ENV]
-    )
-    .filter((staticPage) => {
-      return ![
-        "_app.jsx",
-        "_document.jsx",
-        "api",
-        "_error.jsx",
-        "404.jsx",
-        "sitemap.xml.jsx",
-      ].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath}`;
-    });
+  //   const staticPages = fs
+  //     .readdirSync(
+  //       {
+  //         development: "pages",
+  //         production: "./",
+  //       }[process.env.NODE_ENV]
+  //     )
+  //     .filter((staticPage) => {
+  //       return ![
+  //         "_app.jsx",
+  //         "_document.jsx",
+  //         "api",
+  //         "_error.jsx",
+  //         "404.jsx",
+  //         "sitemap.xml.jsx",
+  //       ].includes(staticPage);
+  //     })
+  //     .map((staticPagePath) => {
+  //       return `${baseUrl}/${staticPagePath}`;
+  //     });
 
-  console.log(serverRuntimeConfig.articlesFolder);
-  const articles = fs.readdirSync(serverRuntimeConfig.articlesFolder);
+  const articles = fs.readdirSync(process.cwd() + "/articles");
 
   console.log(staticPages);
   console.log(articles);
