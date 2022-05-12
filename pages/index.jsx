@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo, SocialProfileJsonLd } from "next-seo";
 import axios from "axios";
 import fs from "fs";
 import dayjs from "dayjs";
@@ -274,6 +274,7 @@ const tools = [
 ];
 
 const title = "Your friendly neighbourhood social entrepreneur | Dan Ferg";
+const url = "https://danferg.com";
 const description =
   "A solutions architect and software developer with an understanding of holistic design; seeking to create digitally enabled change for good.";
 
@@ -297,25 +298,41 @@ const Home = ({ articles }) => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta name="description" content={description} />
-        <meta
-          name="keywords"
-          content="social,entrepreneur,solutions,architect,software,developer,holistic,design,digitally,enabled,change,good,helping,group,yoogle,real,news,land,index"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://danferg.com" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://danferg.com/snow.jpg" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://danferg.com/" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="https://danferg.com/snow.jpg" />
-      </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          type: "website",
+          url: url,
+          title: title,
+          description: description,
+          images: [
+            { url: "https://danferg.com/snow.jpg", alt: "Dan Ferguson" },
+          ],
+          site_name: "DanFerg",
+          profile: {
+            firstName: "Dan",
+            lastName: "Ferguson",
+            username: "danielferguson",
+            gender: "male",
+          },
+        }}
+        twitter={{
+          handle: "@thedannyferg",
+          cardType: "summary_large_image",
+        }}
+      />
+      <SocialProfileJsonLd
+        type="Person"
+        name="Dan Ferguson"
+        url={url}
+        sameAs={[
+          "https://www.instagram.com/thedannyferg/",
+          "https://www.linkedin.com/in/danferg",
+          "https://twitter.com/thedannyferg",
+        ]}
+      />
 
       <div className="flex flex-col gap-32">
         {/* Hero */}
