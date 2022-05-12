@@ -15,7 +15,7 @@ import {
 import Link from "next/link";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LogoJsonLd } from "next-seo";
 import dayjs from "dayjs";
 import Newsletter from "@/components/newsletter";
 
@@ -53,6 +53,35 @@ export default function Page({ latest, articles }) {
           handle: "@thedannyferg",
           cardType: "summary_large_image",
         }}
+      />
+
+      <ArticleJsonLd
+        type="Blog"
+        url="https://danferg.com/articles"
+        title={title}
+        images={["https://danferg.com/snow.jpg"]}
+        authorName="Dan Ferguson"
+        description={description}
+      />
+
+      <LogoJsonLd
+        logo="https://danferg.com/wave.png"
+        url="https://danferg.com"
+      />
+
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Dan Ferg",
+            item: "https://danferg.com",
+          },
+          {
+            position: 2,
+            name: "Articles",
+            item: "https://danferg.com/articles",
+          },
+        ]}
       />
 
       {[latest, ...articles].map((article) => (
@@ -272,13 +301,13 @@ export async function getStaticProps(context) {
 
   files.forEach((file) => {
     const fileName = fs.readFileSync(`articles/${file}`, "utf-8");
-    const { data, content } = matter(fileName);
+    const { data, _ } = matter(fileName);
 
     articles.push({ ...data });
   });
 
   let sorted = articles.sort(function (a, b) {
-    return new Date(b.date) - new Date(a.date);
+    return new Date(b.published) - new Date(a.published);
   });
 
   const latest = sorted.shift();

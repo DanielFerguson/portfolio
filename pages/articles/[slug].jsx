@@ -6,7 +6,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { getArticleBySlug, getArticleNames } from "@/lib/articles";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LogoJsonLd } from "next-seo";
 
 const navigation = [
   { name: "Projects", href: "/#projects" },
@@ -43,6 +43,32 @@ const Article = ({ frontmatter, content, slug }) => {
           cardType: "summary_large_image",
         }}
       />
+
+      <LogoJsonLd
+        logo="https://danferg.com/wave.png"
+        url="https://danferg.com"
+      />
+
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Dan Ferg",
+            item: "https://danferg.com",
+          },
+          {
+            position: 2,
+            name: "Articles",
+            item: "https://danferg.com/articles",
+          },
+          {
+            position: 3,
+            name: frontmatter.title,
+            item: `https://danferg.com/articles/${slug}`,
+          },
+        ]}
+      />
+
       <ArticleJsonLd
         url={`https://danferg.com/articles/${slug}`}
         title={frontmatter.title}

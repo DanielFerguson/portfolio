@@ -1,4 +1,10 @@
-import { NextSeo, SocialProfileJsonLd } from "next-seo";
+import {
+  NextSeo,
+  SocialProfileJsonLd,
+  ArticleJsonLd,
+  LogoJsonLd,
+  BreadcrumbJsonLd,
+} from "next-seo";
 import fs from "fs";
 import dayjs from "dayjs";
 import matter from "gray-matter";
@@ -316,6 +322,7 @@ const Home = ({ articles }) => {
           cardType: "summary_large_image",
         }}
       />
+
       <SocialProfileJsonLd
         type="Person"
         name="Dan Ferguson"
@@ -326,6 +333,37 @@ const Home = ({ articles }) => {
           "https://twitter.com/thedannyferg",
         ]}
       />
+
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Dan Ferg",
+            item: "https://danferg.com",
+          },
+        ]}
+      />
+
+      <LogoJsonLd
+        logo="https://danferg.com/wave.png"
+        url="https://danferg.com"
+      />
+
+      {articles.map((article) => (
+        <ArticleJsonLd
+          keyOverride={article.slug}
+          key={article.slug}
+          url={`https://danferg.com/articles/${article.slug}`}
+          title={article.frontmatter.title}
+          description={article.frontmatter.excerpt}
+          images={[article.frontmatter.featuredImage]}
+          datePublished={article.frontmatter.published}
+          dateModified={article.frontmatter.published}
+          authorName="Dan Ferguson"
+          publisherName="Dan Ferg"
+          publisherLogo="https://danferg.com/wave.png"
+        />
+      ))}
 
       <div className="flex flex-col gap-32">
         {/* Hero */}
@@ -714,6 +752,13 @@ const Home = ({ articles }) => {
                 </div>
               ))}
             </div>
+            <div className="flex justify-center mt-8">
+              <Link href="/articles">
+                <a className="mt-3 flex items-center justify-center px-5 py-3 border border-transparent shadow text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white">
+                  Read More
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -726,16 +771,22 @@ const Home = ({ articles }) => {
 export async function getStaticProps() {
   const files = fs.readdirSync("articles");
 
-  const articles = files.map((fileName) => {
-    const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(`articles/${fileName}`, "utf-8");
-    const { data: frontmatter } = matter(readFile);
+  const articles = files
+    .map((fileName) => {
+      const slug = fileName.replace(".md", "");
+      const readFile = fs.readFileSync(`articles/${fileName}`, "utf-8");
+      const { data: frontmatter } = matter(readFile);
 
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+      return {
+        slug,
+        frontmatter,
+      };
+    })
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.published) - new Date(a.frontmatter.published)
+    )
+    .slice(0, 3);
 
   return {
     props: {
