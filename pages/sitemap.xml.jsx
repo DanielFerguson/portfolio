@@ -33,45 +33,50 @@ export const getServerSideProps = async ({ res }) => {
   const articlesDir = path.resolve(process.cwd(), "articles");
   const files = fs.readdirSync(articlesDir);
 
-  const articles = files.map((fileName) => {
-    const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(`${articlesDir}/${fileName}`, "utf-8");
-    const { data: frontmatter } = matter(readFile);
+  console.log(articlesDir);
+  console.log(files);
 
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+  //   const articles = files.map((fileName) => {
+  //     const slug = fileName.replace(".md", "");
+  //     const readFile = fs.readFileSync(`${articlesDir}/${fileName}`, "utf-8");
+  //     const { data: frontmatter } = matter(readFile);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${staticPages
-        .map((url) => {
-          return `
-            <url>
-              <loc>${url.replace(".jsx", "").replace("index", "")}</loc>
-              <lastmod>${new Date().toISOString()}</lastmod>
-              <changefreq>monthly</changefreq>
-              <priority>1.0</priority>
-            </url>
-          `;
-        })
-        .join("")}
-            ${articles
-              .map(({ slug, frontmatter }) => {
-                return `
-              <url>
-              <loc>${baseUrl}/articles/${slug}</loc>
-              <lastmod>${frontmatter.published}</lastmod>
-              <changefreq>monthly</changefreq>
-              <priority>1.0</priority>
-              </url>
-          `;
-              })
-              .join("")}
-    </urlset>
-  `;
+  //     return {
+  //       slug,
+  //       frontmatter,
+  //     };
+  //   });
+
+  //   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  //     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  //       ${staticPages
+  //         .map((url) => {
+  //           return `
+  //             <url>
+  //               <loc>${url.replace(".jsx", "").replace("index", "")}</loc>
+  //               <lastmod>${new Date().toISOString()}</lastmod>
+  //               <changefreq>monthly</changefreq>
+  //               <priority>1.0</priority>
+  //             </url>
+  //           `;
+  //         })
+  //         .join("")}
+  //             ${articles
+  //               .map(({ slug, frontmatter }) => {
+  //                 return `
+  //               <url>
+  //               <loc>${baseUrl}/articles/${slug}</loc>
+  //               <lastmod>${frontmatter.published}</lastmod>
+  //               <changefreq>monthly</changefreq>
+  //               <priority>1.0</priority>
+  //               </url>
+  //           `;
+  //               })
+  //               .join("")}
+  //     </urlset>
+  //   `;
+
+  const sitemap = "";
 
   res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
