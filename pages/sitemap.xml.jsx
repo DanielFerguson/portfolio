@@ -30,7 +30,8 @@ export const getServerSideProps = async ({ res }) => {
       return `${baseUrl}/${staticPagePath}`;
     });
 
-  const files = fs.readdirSync("articles");
+  const articlesDir = path.resolve(process.cwd(), "articles");
+  const files = fs.readdirSync(articlesDir);
 
   const articles = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
