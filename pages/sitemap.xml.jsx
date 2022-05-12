@@ -36,7 +36,7 @@ export const getServerSideProps = async ({ res }) => {
 
   const articles = fs.readdirSync(process.cwd() + "/articles");
 
-  console.log(staticPages);
+  //   console.log(staticPages);
   console.log(articles);
 
   //   const articles = files.map((fileName) => {
