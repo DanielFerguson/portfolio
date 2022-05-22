@@ -53,12 +53,12 @@ const Article = ({ frontmatter, content, slug }) => {
         itemListElements={[
           {
             position: 1,
-            name: "Dan Ferg",
+            name: "home",
             item: "https://danferg.com",
           },
           {
             position: 2,
-            name: "Articles",
+            name: "articles",
             item: "https://danferg.com/articles",
           },
           {

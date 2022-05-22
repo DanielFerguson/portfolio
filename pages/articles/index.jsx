@@ -24,6 +24,7 @@ const navigation = [
   { name: "Projects", href: "/#projects", icon: PaperAirplaneIcon },
   { name: "Skills", href: "/#skills", icon: BeakerIcon },
   { name: "Articles", href: "#", icon: NewspaperIcon },
+  { name: "Talks", href: "/#talks", icon: NewspaperIcon },
   { name: "Contact", href: "#contact", icon: PhoneIcon },
 ];
 
@@ -73,12 +74,12 @@ export default function Page({ latest, articles }) {
         itemListElements={[
           {
             position: 1,
-            name: "Dan Ferg",
+            name: "home",
             item: "https://danferg.com",
           },
           {
             position: 2,
-            name: "Articles",
+            name: "articles",
             item: "https://danferg.com/articles",
           },
         ]}

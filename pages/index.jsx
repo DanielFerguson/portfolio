@@ -65,6 +65,7 @@ const navigation = [
   { name: "Work", href: "#work", icon: BriefcaseIcon },
   { name: "Skills", href: "#skills", icon: BeakerIcon },
   { name: "Articles", href: "/articles", icon: NewspaperIcon },
+  { name: "Talks", href: "#talks", icon: NewspaperIcon },
 ];
 
 const projects = [
@@ -288,6 +289,30 @@ const tools = [
     icon: faHubspot,
   },
 ];
+const talks = [
+  {
+    title: "Taking a startup idea from Concept to Production",
+    image: "/concept-to-production.png",
+    category: "Entrepreneurship",
+    link: "https://www.youtube.com/watch?v=_SZP7QmIIfE",
+    date: "2022-05-03",
+  },
+  {
+    title: "SwinLead Leadership Workshop",
+    image: "/swinlead.png",
+    category: "Leadership",
+    link: "https://www.youtube.com/watch?v=7_aJAvfGNsY",
+    date: "2022-04-13",
+  },
+  {
+    title:
+      "DFAT New Colombo Plan Momentum Webinar: Entrepreneurial Vision and Community",
+    image: "/hh.jpg",
+    category: "Social Impact",
+    link: "https://www.youtube.com/watch?v=g89pZZyEsfI",
+    date: "2020-07-10",
+  },
+];
 
 const title = "Your friendly neighbourhood social entrepreneur | Dan Ferg";
 const url = "https://danferg.com";
@@ -338,7 +363,7 @@ const Home = ({ articles }) => {
         itemListElements={[
           {
             position: 1,
-            name: "Dan Ferg",
+            name: "home",
             item: "https://danferg.com",
           },
         ]}
@@ -701,7 +726,7 @@ const Home = ({ articles }) => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-                And every now and then I like to write.{" "}
+                Every now and then I like to write.{" "}
               </h2>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                 It&apos;s a great way to share knowledge, remember how far
@@ -759,6 +784,86 @@ const Home = ({ articles }) => {
                 </a>
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Talks */}
+        <div id="talks" className="px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                And above all, I love helping others.{" "}
+              </h2>
+              <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                I love to share my experience, my journey and my knowledge. I
+                have been truly fortunate to be able to build startups, social
+                impact projects and work with government and the private sector
+                on every level. I want to further my impact by helping others
+                achieve their goals and visions.
+              </p>
+            </div>
+            <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+              {/* title, image, category, link, date */}
+              {talks.map((talk) => (
+                <div
+                  key={talk.title}
+                  className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div className="flex-shrink-0">
+                    <Image
+                      className="h-48 object-cover"
+                      src={talk.image}
+                      alt=""
+                      layout="responsive"
+                      width="50"
+                      height="30"
+                    />
+                  </div>
+                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-indigo-600">
+                        {talk.category}
+                      </p>
+                      <a
+                        href={talk.link}
+                        className="block mt-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <p className="text-xl font-semibold text-gray-900">
+                          {talk.title}
+                        </p>
+                        {/* <p className="mt-3 text-base text-gray-500">
+                          {article.frontmatter.excerpt}
+                        </p> */}
+                      </a>
+                    </div>
+                    <div className="mt-6 flex items-center text-sm text-gray-500">
+                      <time dateTime={talk.date}>
+                        {dayjs(talk.date).format("ddd D, MMM YYYY")}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="pt-8 text-center max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+              Looking for speakers?
+              <br />
+              <a
+                href="#contact"
+                className="text-indigo-600 underline font-medium hover:text-indigo-900"
+              >
+                Get in touch!
+              </a>
+            </p>
+            {/* <div className="flex justify-center mt-8">
+              <Link href="/articles">
+                <a className="mt-3 flex items-center justify-center px-5 py-3 border border-transparent shadow text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white">
+                  Read More
+                </a>
+              </Link>
+            </div> */}
           </div>
         </div>
 
