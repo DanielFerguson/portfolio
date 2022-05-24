@@ -8,11 +8,6 @@ const { serverRuntimeConfig } = getConfig();
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
-  const baseUrl = {
-    development: "http://localhost:3000",
-    production: "https://danferg.com",
-  }[process.env.NODE_ENV];
-
   const staticPages = fs
     .readdirSync(
       {
@@ -36,15 +31,30 @@ export const getServerSideProps = async ({ res }) => {
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath}`;
+      return `https://danferg.com/${staticPagePath}`;
     });
 
   const articleNames = fs.readdirSync(process.cwd() + "/articles");
+  const newsletterNames = fs.readdirSync(process.cwd() + "/newsletters");
 
   const articles = articleNames.map((name) => {
     const slug = name.replace(".md", "");
     const readFile = fs.readFileSync(
       `${process.cwd()}/articles/${name}`,
+      "utf-8"
+    );
+    const { data: frontmatter } = matter(readFile);
+
+    return {
+      slug,
+      frontmatter,
+    };
+  });
+
+  const newsletters = newsletterNames.map((name) => {
+    const slug = name.replace(".md", "");
+    const readFile = fs.readFileSync(
+      `${process.cwd()}/newsletters/${name}`,
       "utf-8"
     );
     const { data: frontmatter } = matter(readFile);
@@ -75,18 +85,33 @@ export const getServerSideProps = async ({ res }) => {
             `;
         })
         .join("")}
-              ${articles
-                .map(({ slug, frontmatter }) => {
-                  return `
-                <url>
-                <loc>${baseUrl}/articles/${slug}</loc>
-                <lastmod>${frontmatter.published}</lastmod>
-                <changefreq>monthly</changefreq>
-                <priority>1.0</priority>
-                </url>
-            `;
-                })
-                .join("")}
+        
+        ${articles
+          .map(({ slug, frontmatter }) => {
+            return `
+          <url>
+          <loc>https://danferg.com/articles/${slug}</loc>
+          <lastmod>${frontmatter.published}</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>1.0</priority>
+          </url>
+      `;
+          })
+          .join("")}
+
+        ${newsletters
+          .map(({ slug, frontmatter }) => {
+            return `
+        <url>
+        <loc>https://danferg.com/newsletters/${slug}</loc>
+        <lastmod>${frontmatter.published}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        </url>
+    `;
+          })
+          .join("")}
+
       </urlset>
     `;
 

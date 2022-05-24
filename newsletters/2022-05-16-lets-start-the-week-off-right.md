@@ -1,0 +1,82 @@
+---
+slug: "2022-05-16-lets-start-the-week-off-right"
+title: "Let's start the week off right!"
+excerpt: "I woke up Saturday morning, grabbed my usual cup of tea, and started to catch up on what I missed in internet land - the usual routine. However, it wasn’t soon after I got a text message from Observer..."
+published: "2022-05-16"
+category: "Newsletter"
+featuredImage: /assets/newsletter/2022-05-16/observer.png
+---
+
+👋 A very good morning to you!
+
+I hope you had a spectacular, restful, and productive weekend; but if you didn’t, why not, and how can you the next one better?
+
+I must confess, originally I was struggling to think of things to write about for this newsletter. I was thinking about it all of last week. How can I be succinct, deliver value and keep it interesting? I love writing, so I thought I’d give it a crack with what comes naturally to me.
+
+There’s a feedback form link at the bottom of this email - when you have a chance, I would greatly appreciate it if you could let me know your thoughts, and how I could improve?
+
+With that, let’s get cracking. 🚀
+
+## Observer 🔭
+
+I woke up Saturday morning, grabbed my usual cup of tea, and started to catch up on what I missed in internet land - the usual routine. However, it wasn’t soon after I got a text message from Observer alerting me that one of the production services for Imperial Wealth went down - a critical piece of infrastructure that powers many of our most valuable offerings.
+
+What used to happen was I’d get a frantic call from a director, who had been fielding questions and concern from our customer base, and I’d rush to get a patch together before too many people had missed opportunities.
+
+Not this morning.
+
+![Observer tweets](/assets/newsletter/2022-05-16/observer.png)
+
+Rather, even before clients realized, I was on AWS restarting servers, reading logs, and pushing a fix. Next thing I know, _Bing!_, Observer had sent me another message to let me know that the service was back up.
+
+When I first started as CTO at this company, it was all about speed. Speed to iterate, to release, to get onto the next project. Admittedly, we’ve got some tech debt to pay off, but that’s the price of small, agile teams with ambitions of taking over the world.
+
+(For the uninitiated, "tech debt" refers to the additional work that you'll need to do or things you will need to fix for the sake of getting something done faster)
+
+We’re now starting to pay it off, but for me, the knowledge that I’ll be warned about a service having an issue is something that really helps me sleep at night. No more need to rely on clients to be our canaries. 😅
+
+Service, server, and API monitoring make sense for the tech world, but this newsletter is filled with people from all walks of life - I would love to know how you are monitoring the important things in your world. Please, let me know!
+
+I’m very excited to say that for those already on the platform, it’s only getting better. This week we’re releasing three major, and much needed upgrades:
+
+1. Teams - share your monitors with your team
+2. Dashboard improvements - mobile users will be able to sigh a sigh of relief
+3. Home/sales page - I’ve been very slack in this department. Instead of the login page being our lander, I’ll be publishing the home page; the touchpoint for first-time visitors which explains the why, how, and what of Observer.
+
+## Politiquiz 📣
+
+(name certainly pending…)
+
+I’ve had questions about what startup is coming for May’s installment of 12 startups in 12 months. I’m excited to share that this month’s efforts have been around political transparency.
+
+_snoooooooore_ 😴 - I know, I know; I like to think of myself as a politically-charged person (read: someone who thinks that done right, a great chance can come from our parliament), but I definitely agree, the lead up to elections can be a little much. However, this isn’t meant to change your vote.
+
+This month’s SAP (startup, app, or program) is about helping you connect with your representative.
+
+When you sign up, you’ll be able to take a simple quiz on issues that have gone through parliament. We’ll then show you how well your representative… well, represents you.
+
+When they are on something, you’ll get a push notification explaining the topic, the issue, and ask how you’d vote on it - then we’ll show you how they voted.
+
+This has come out of my spite for the media circus, the “X-Factor”-like performance our politics has become. Politics, as aptly summarized by Adam Bandt, “should be a contest of big ideas that will change our lives for the better.” I couldn’t agree more with this statement, and rather than just complain, I want to have a shot at giving people a different way to engage with their representative that is more substantive than Facebook and billboard advertising.
+
+I would really love to hear your feedback on this - whether you’re politically charged like me, or you couldn’t give two hoots, let me know (reply to this email)!
+
+## Staying Customer-Driven 🔎
+
+I have always found that my most used project ideas come from problems that I solve for myself. Recently, in my talk Concept to Production, I spoke about how to have good ideas.
+
+One of the easiest ways to find problems to solve is to be conscious in our day-to-day lives. Find better and different ways to do things you’re already doing.
+
+As I rebuild yFocus ⚗️, I can’t wait to be able to use the platform to help validate ideas even before I start them. However, how can I stay customer-driven once the idea is launched?
+
+I always tell my mentees to listen to their customers for the features that matter to them - build your roadmap lean, fast, and focused.
+
+It’s got me thinking… more to come on this.
+
+## Feedback
+
+If you’ve made it this far - thank you! ❤️ It would mean so much to me if you could fill out [this feedback form](https://forms.gle/8gZKxo4ccQ1ZDvR56). It’s a quick one, promise. I want to make sure this is interesting for you and find ways that I can improve.
+
+I hope you have an awesome week. Thanks for starting it with me. ❤️
+
+- Dan

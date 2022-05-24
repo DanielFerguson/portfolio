@@ -13,7 +13,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
-import { getArticleBySlug, getArticleNames } from "@/lib/articles";
+import { getNewsletterBySlug, getNewsletterNames } from "@/lib/newsletters";
 import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LogoJsonLd } from "next-seo";
 
 const navigation = [
@@ -31,10 +31,10 @@ const Article = ({ frontmatter, content, slug }) => {
         title={frontmatter.title}
         titleTemplate="%s | Dan Ferg"
         description={frontmatter.excerpt}
-        canonical={`https://danferg.com/articles/${slug}`}
+        canonical={`https://danferg.com/newsletters/${slug}`}
         openGraph={{
           type: "article",
-          url: `https://danferg.com/articles/${slug}`,
+          url: `https://danferg.com/newsletters/${slug}`,
           title: frontmatter.title,
           description: frontmatter.excerpt,
           article: {
@@ -68,18 +68,18 @@ const Article = ({ frontmatter, content, slug }) => {
           {
             position: 2,
             name: "articles",
-            item: "https://danferg.com/articles",
+            item: "https://danferg.com/newsletters",
           },
           {
             position: 3,
             name: frontmatter.title,
-            item: `https://danferg.com/articles/${slug}`,
+            item: `https://danferg.com/newsletters/${slug}`,
           },
         ]}
       />
 
       <ArticleJsonLd
-        url={`https://danferg.com/articles/${slug}`}
+        url={`https://danferg.com/newsletters/${slug}`}
         title={frontmatter.title}
         description={frontmatter.excerpt}
         images={[frontmatter.featuredImage]}
@@ -91,7 +91,6 @@ const Article = ({ frontmatter, content, slug }) => {
       />
 
       <div className="flex flex-col gap-16">
-        {/* Hero */}
         <div>
           <header>
             <Popover className="relative bg-white">
@@ -218,7 +217,6 @@ const Article = ({ frontmatter, content, slug }) => {
           </main>
         </div>
 
-        {/* Content */}
         <div
           className="prose mx-auto px-8 md:px-0"
           dangerouslySetInnerHTML={{ __html: md().render(content) }}
@@ -231,7 +229,7 @@ const Article = ({ frontmatter, content, slug }) => {
 };
 
 export async function getStaticPaths() {
-  const articleNames = getArticleNames();
+  const articleNames = getNewsletterNames();
 
   const paths = articleNames.map((name) => ({
     params: {
@@ -246,7 +244,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const { frontmatter, content } = getArticleBySlug(slug);
+  const { frontmatter, content } = getNewsletterBySlug(slug);
 
   return {
     props: {

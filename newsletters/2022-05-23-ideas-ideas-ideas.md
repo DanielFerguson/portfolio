@@ -1,0 +1,84 @@
+---
+slug: "2022-05-23-ideas-ideas-ideas"
+title: "Ideas, ideas, ideas!"
+excerpt: "If you know me quite well, you'll know that I'm one of those people that just seems to come up with new ideas every day. For the past few years I've been trying to find a good way to store manage and even organise these ideas."
+published: "2022-05-23"
+category: "Newsletter"
+featuredImage: /assets/newsletter/2022-05-23/notion.jpg
+---
+
+Hey, hey and a g’day. Another week, another chance to change the world. I hope you had a specular weekend!
+
+This week’s is going to be a bit of a shorter one, as I'm running quite behind in my daily schedule. However, I am excited to show you a couple of things that I've been working on. Let's get started.
+
+## Ideas, ideas ideas
+
+If you know me quite well, you'll know that I'm one of those people that just seems to come up with new ideas every day.
+
+For the past few years I've been trying to find a good way to store manage and even organise these ideas. I've tried solutions like Evernote, OneNote from Microsoft, Notion, as well as Apple notes. Each of these ways have some good aspects in their own right, however none of them have really been able to capture my attention and keep me for longer than a few months.
+
+I started to think though that maybe this wasn't an issue with the apps themselves, maybe it was the way that I was taking the notes.
+
+I had a bit of a thought session last week where I put pen to paper and broke down the core concepts of each of the applications of which I liked. I thing I love about Apple notes is its simplicity. Notion handles complex structure and organisation extremely well. OneNote in Evernote, I didn't really care for it to be honest - they just didn't bring much to the table in my eyes.
+
+Finally enough my knees organisation and simplicity is handled really well in Notion - you just need to know how to organise it.
+
+I spent the weekend compiling my ideas from past notebooks and applications, into a single repository. I've gotta tell you, it feels wonderful knowing that all of my ideas, whether that good or bad, I can reach for them whenever I want.
+
+I'd love to know, do you have a way of capturing your ideas, your inspirations? Let me know because I'd love to keep trying new things.
+
+![Notion](/assets/newsletter/2022-05-23/notion.jpg)
+
+# 24hr Build Video Series
+
+For those of you who came to my Concept to Production workshop, you might be pleased to hear that I'm actually going to start a Siri said I've been wanting to do for a long time now. This series is called “The 24hr Build”.
+
+As I'm sure you know by now, I've been working on 12 startups in 12 months. It's certainly been a challenge, and I still got a long way to go. It's been amazing to see where my strengths actually lie, but also my glaring weaknesses. This series is going to be an exercise of me applying the concept of how I build start-ups on real idea that I've been wanting to build.
+
+Now, I’m not going to promise the world. There's gonna be a lot of rough edges, a lot of challenges to overcome, but for the uninitiated, this is why we do it.
+
+The first episode, I'm going to drop you into one of the projects I'm working on; Polipal. Quick side note, if you have any other ideas for the name, I am all ears.
+
+I'll go back to how I saw the problem, how I came up with a couple of solutions, validated those and how I'm building it now.
+
+For now though, I'll leave you with this teaser.
+
+[![24hr Build Series teaser](/assets/newsletter/2022-05-23/trailer.png)](https://youtu.be/3CbRFnSNaqo)
+
+## Observer private beta
+
+Quick update on Observer. Apart from working on my ideas board in Notion this weekend, I laid out and planned a real roadmap for observer. Something I've wanted to do since I started it.
+
+I've always told my mentees that if you don't know what you're building (typically illustrated through a design or a mockup), then don't start building it. I use this general rule of thumb to help weed out time wasting efforts. However I've caught myself doing this in different ways than I'm used to.
+
+I'm cautious not to just build features upon features without even thinking about the marketing plan, however this is a product that solves a real issue of mine and I want to make sure that it has an edge in this competitive market.
+
+(I’ll also come clean, I gave it a much-needed facelift)
+
+I'll be looking to launch the private beta within the next couple of weeks. If you're looking for an all in one solution to help monitor and notify you when your websites, services or infrastructure goes down, let me know. I'd love to know your thoughts on the platform.
+
+![Observer facelift](/assets/newsletter/2022-05-23/observer.jpg)
+
+## Audio-newsletters (…podcasts)
+
+If at all you were wondering, I'm trying a new technique for writing these newsletters. I don't actually type them, I use dictation. I employ you to have a go at it, the technologies come quite far and I think you would be genuinely impressed at how good it's gotten.
+
+One of the things I've been thinking about is how do I make this newsletter more accessible to people. On Mondays I come into the office, and I have an hour and a half drive to myself, and my thoughts. It's a perfect time to listen to a podcast, the news, whathaveyou - but what about newsletters?
+
+I've got a couple of newsletters that I love to read in the mornings, but I’d love to be able to listen to them on the way into work…
+
+Side note; if you've got any good podcasts, shoot on my way.
+
+As a test run, next week's podcast also include an audio clip that you can listen too. I'd love to know whether or not it was useful for you or it's just one of those extra things that doesn't add value.
+
+---
+
+Well that's basically it for this week. I hope in the next issue, I'll be sending you a link to the first episode of the 24 hour build series. If it's helpful, let me know! Also, if you want me to touch on anything else, whether in the series or on this newsletter, I'm all ears.
+
+Thank you so much to those that provided feedback last week. Validation of something and I'm really trying to get good at, and I think we're on the right path here.
+
+Have a fantastic week, and I'll leave you with this awesome piece of wisdom that I came across last week from one of my Uber drivers.
+
+“In everything we do, we are looking for more certainty. Help deliver that to someone, and you'll be a rich man.”
+
+I think we can all agree that we live in quite uncertain times, but we do have the resources help those around us to feel just a little bit more certain.

@@ -21,6 +21,8 @@ import {
   BriefcaseIcon,
   NewspaperIcon,
   PhoneIcon,
+  AnnotationIcon,
+  SpeakerphoneIcon,
 } from "@heroicons/react/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -61,11 +63,11 @@ const FollowProject = () => {
 };
 
 const navigation = [
-  { name: "Projects", href: "#projects", icon: PaperAirplaneIcon },
-  { name: "Work", href: "#work", icon: BriefcaseIcon },
-  { name: "Skills", href: "#skills", icon: BeakerIcon },
-  { name: "Articles", href: "/articles", icon: NewspaperIcon },
-  { name: "Talks", href: "#talks", icon: NewspaperIcon },
+  { name: "Projects", href: "/#projects", icon: PaperAirplaneIcon },
+  { name: "Work", href: "/#work", icon: BriefcaseIcon },
+  { name: "Talks", href: "/#talks", icon: SpeakerphoneIcon },
+  { name: "Articles", href: "/articles", icon: AnnotationIcon },
+  { name: "Newsletters", href: "/newsletters", icon: NewspaperIcon },
 ];
 
 const projects = [

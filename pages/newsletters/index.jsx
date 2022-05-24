@@ -7,10 +7,13 @@ import {
   XIcon,
   SparklesIcon,
   PaperAirplaneIcon,
+  HomeIcon,
+  PhoneIcon,
+  BeakerIcon,
   NewspaperIcon,
-  BriefcaseIcon,
-  SpeakerphoneIcon,
   AnnotationIcon,
+  SpeakerphoneIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import Footer from "@/components/footer";
@@ -23,14 +26,14 @@ const navigation = [
   { name: "Projects", href: "/#projects", icon: PaperAirplaneIcon },
   { name: "Work", href: "/#work", icon: BriefcaseIcon },
   { name: "Talks", href: "/#talks", icon: SpeakerphoneIcon },
-  { name: "Articles", href: "#", icon: AnnotationIcon },
-  { name: "Newsletters", href: "/newsletters", icon: NewspaperIcon },
+  { name: "Articles", href: "/articles", icon: AnnotationIcon },
+  { name: "Newsletters", href: "#", icon: NewspaperIcon },
 ];
 
-const title = "Every now and then I like to write | Dan Ferg";
-const url = "https://danferg.com/articles";
+const title = "Follow my journey on solving problems! | Dan Ferg";
+const url = "https://danferg.com/newsletters";
 const description =
-  "It's a great way to share knowledge, remember how far we've come and create dialogue on topics that interest me or are near to my heart.";
+  "I regularly write about my happenings, discoveries, thoughts and downfalls in my newsletter! Come on my journey with me.";
 
 export default function Page({ latest, articles }) {
   return (
@@ -57,7 +60,7 @@ export default function Page({ latest, articles }) {
 
       <ArticleJsonLd
         type="Blog"
-        url="https://danferg.com/articles"
+        url="https://danferg.com/newsletters"
         title={title}
         images={["https://danferg.com/snow.jpg"]}
         authorName="Dan Ferguson"
@@ -78,17 +81,17 @@ export default function Page({ latest, articles }) {
           },
           {
             position: 2,
-            name: "articles",
-            item: "https://danferg.com/articles",
+            name: "newsletters",
+            item: "https://danferg.com/newsletters",
           },
         ]}
       />
 
-      {[latest, ...articles].map((article) => (
+      {/* {[latest, ...articles].map((article) => (
         <ArticleJsonLd
           keyOverride={article.slug}
           key={article.slug}
-          url={`https://danferg.com/articles/${article.slug}`}
+          url={`https://danferg.com/newsletters/${article.slug}`}
           title={article.title}
           description={article.excerpt}
           images={[article.featuredImage]}
@@ -98,7 +101,7 @@ export default function Page({ latest, articles }) {
           publisherName="Dan Ferg"
           publisherLogo="https://danferg.com/wave.png"
         />
-      ))}
+      ))} */}
 
       {/* Nav */}
       <Popover className="relative bg-white max-w-7xl mx-auto">
@@ -198,7 +201,7 @@ export default function Page({ latest, articles }) {
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
-                      <AnnotationIcon
+                      <NewspaperIcon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
                       />
@@ -213,7 +216,7 @@ export default function Page({ latest, articles }) {
                     </p>
                     <div className="mt-6">
                       <Link
-                        href={`https://danferg.com/articles/${latest.slug}`}
+                        href={`https://danferg.com/newsletters/${latest.slug}`}
                       >
                         <a className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
                           Read now
@@ -226,7 +229,7 @@ export default function Page({ latest, articles }) {
               <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                     src={latest.featuredImage}
                     alt={latest.title}
                   />
@@ -265,7 +268,7 @@ export default function Page({ latest, articles }) {
                           <p className="hover:underline">{article.category}</p>
                         </p>
                         <a
-                          href={`https://danferg.com/articles/${article.slug}`}
+                          href={`https://danferg.com/newsletters/${article.slug}`}
                           className="block mt-2"
                         >
                           <p className="text-xl font-semibold text-gray-900">
@@ -295,12 +298,12 @@ export default function Page({ latest, articles }) {
 }
 
 export async function getStaticProps(context) {
-  const files = fs.readdirSync("articles");
+  const files = fs.readdirSync("newsletters");
 
   let articles = [];
 
   files.forEach((file) => {
-    const fileName = fs.readFileSync(`articles/${file}`, "utf-8");
+    const fileName = fs.readFileSync(`newsletters/${file}`, "utf-8");
     const { data, _ } = matter(fileName);
 
     articles.push({ ...data });
