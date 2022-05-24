@@ -169,6 +169,8 @@ export default function Page({ latest, articles }) {
       </Popover>
 
       <main>
+        <h1 className="sr-only">Newsletters</h1>
+
         {/* Featured / Latest Article */}
         <div className="pb-16 overflow-hidden">
           <div className="mt-8 lg:mt-24">
