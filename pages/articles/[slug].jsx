@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import { getArticleBySlug, getArticleNames } from "@/lib/articles";
 import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LogoJsonLd } from "next-seo";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 const navigation = [
   { name: "Projects", href: "/#projects", icon: PaperAirplaneIcon },
@@ -25,6 +26,11 @@ const navigation = [
 ];
 
 const Article = ({ frontmatter, content, slug }) => {
+  const pages = [
+    { name: "Articles", href: "/articles", current: false },
+    { name: frontmatter.title, href: "#", current: true },
+  ];
+
   return (
     <>
       <NextSeo
@@ -216,6 +222,10 @@ const Article = ({ frontmatter, content, slug }) => {
               </div>
             </div>
           </main>
+
+          <div className="mt-8 max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
+            <Breadcrumbs pages={pages} />
+          </div>
         </div>
 
         {/* Content */}

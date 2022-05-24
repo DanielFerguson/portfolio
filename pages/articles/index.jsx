@@ -69,21 +69,6 @@ export default function Page({ latest, articles }) {
         url="https://danferg.com"
       />
 
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "home",
-            item: "https://danferg.com",
-          },
-          {
-            position: 2,
-            name: "articles",
-            item: "https://danferg.com/articles",
-          },
-        ]}
-      />
-
       {[latest, ...articles].map((article) => (
         <ArticleJsonLd
           keyOverride={article.slug}

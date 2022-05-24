@@ -361,16 +361,6 @@ const Home = ({ articles }) => {
         ]}
       />
 
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "home",
-            item: "https://danferg.com",
-          },
-        ]}
-      />
-
       <LogoJsonLd
         logo="https://danferg.com/wave.png"
         url="https://danferg.com"

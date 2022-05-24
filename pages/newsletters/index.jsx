@@ -58,36 +58,12 @@ export default function Page({ latest, articles }) {
         }}
       />
 
-      <ArticleJsonLd
-        type="Blog"
-        url="https://danferg.com/newsletters"
-        title={title}
-        images={["https://danferg.com/snow.jpg"]}
-        authorName="Dan Ferguson"
-        description={description}
-      />
-
       <LogoJsonLd
         logo="https://danferg.com/wave.png"
         url="https://danferg.com"
       />
 
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "home",
-            item: "https://danferg.com",
-          },
-          {
-            position: 2,
-            name: "newsletters",
-            item: "https://danferg.com/newsletters",
-          },
-        ]}
-      />
-
-      {/* {[latest, ...articles].map((article) => (
+      {[latest, ...articles].map((article) => (
         <ArticleJsonLd
           keyOverride={article.slug}
           key={article.slug}
@@ -101,7 +77,7 @@ export default function Page({ latest, articles }) {
           publisherName="Dan Ferg"
           publisherLogo="https://danferg.com/wave.png"
         />
-      ))} */}
+      ))}
 
       {/* Nav */}
       <Popover className="relative bg-white max-w-7xl mx-auto">

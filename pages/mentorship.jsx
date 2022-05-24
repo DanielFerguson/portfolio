@@ -80,21 +80,6 @@ export default function Page({ latest, articles }) {
         url="https://danferg.com"
       />
 
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: "home",
-            item: "https://danferg.com",
-          },
-          {
-            position: 2,
-            name: "mentorship",
-            item: "https://danferg.com/mentorship",
-          },
-        ]}
-      />
-
       {/* Nav */}
       <Popover className="relative bg-white max-w-7xl mx-auto">
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
