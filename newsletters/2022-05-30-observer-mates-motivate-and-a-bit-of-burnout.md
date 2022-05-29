@@ -4,7 +4,7 @@ title: "Observer, Mates Motivate and a bit of burnout"
 excerpt: "Well, I’m sure that it’s no secret that I’m a workaholic. Whether it’s as a CTO, a founder, a Partner, or a President, I’ll always find something to do."
 published: "2022-05-30"
 category: "Newsletter"
-featuredImage: /assets/newsletter/2022-05-30/
+featuredImage: /assets/newsletter/2022-05-30/figma.jpg
 ---
 
 And a very good morning to you! 🥂
