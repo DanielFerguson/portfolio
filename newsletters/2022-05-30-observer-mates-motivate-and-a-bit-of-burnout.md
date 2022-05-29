@@ -1,0 +1,103 @@
+---
+slug: "2022-05-30-observer-mates-motivate-and-a-bit-of-burnout"
+title: "Observer, Mates Motivate and a bit of burnout"
+excerpt: "Well, I’m sure that it’s no secret that I’m a workaholic. Whether it’s as a CTO, a founder, a Partner, or a President, I’ll always find something to do."
+published: "2022-05-30"
+category: "Newsletter"
+featuredImage: /assets/newsletter/2022-05-30/
+---
+
+And a very good morning to you! 🥂
+
+I hope you’ve had a great weekend! I can’t wait to share a couple of things that have been going on in my world over the last week. We’ll be covering a few things, including my latest experience with a close-to burnout situation. It’s not pretty, it’s still raw, but it is important.
+
+## Burnout, let’s talk about it
+
+Ok, I’ll be upfront - the first episode of the 24hr Build Series 🛠️ isn’t here yet. Why? Well, last week I almost burnt out.
+
+First up let’s answer the question, what is burnout? For those of you fortunate (read: responsible) enough to not work yourself to the bone, to the point where you become cynical and distant, please use this as a sort-of warning to know you’re not missing anything on this side of the fence.
+
+There is a major difference between being tired and burning out - especially as Australians and people of the internet-era, we love to blow things out of proportion. However, being serious with you here, you (and I) need to know the different symptoms of extreme tiredness and burnout as the treatments can be wildly different. I’m not an expert in that field, so I’m hesitant to go over it too much - but worth having a read.
+
+To cover the difference briefly, tiredness doesn’t go away with sleep - it comes from a place much deeper. Burnout is usually accompanied by the absence of positive emotions altogether. Things can feel helpless, neverending, and bleak.
+
+### Where has this come from?
+
+Well, I’m sure that it’s no secret that I’m a workaholic. I love to work. My day job is solving complex problems with small budgets, small teams, and short deadlines. Coming home from that, my hobbies include work, and…. well, work. On the surface, it may sound sad - but it’s not the work that I find deeply fulfilling, it’s the impact my work can have and has on other people. I think of it as a superpower. It’s what I get up for every day. It’s why I’ve worked almost every day for the past 4 years. Whether it’s as a CTO, a founder, a Partner, or a President, I’ll always find something to do.
+
+However, I can become lost in my own work. With my CTO hat on now, it’s been an absolute grind for the past few months. It’s been an incredibly turbulent environment. With the loss of on-shore power and the multitude of factors that have led to me being, once again, the only developer in our tech team of 3, work has become hard to manage.
+
+I’d love to say that I am a killer project manager, and I think I have proved my mettle time and again, but I am still learning. We’re currently in a position where we’ve got deadlines piling up, a severe lack of resources, and a split team.
+
+I also can take work too personally. One of my colleagues has mastered this. He has arguably taken care of some of the toughest situations that I have ever seen in business, yet can leave it all at the door at the end of the day; something that I am trying to mimic. However, it is still something that I struggle with, and that played a large part in the hiatus from my regular schedule this week.
+
+### Where to from here?
+
+During one of my mindless scrolling sessions of Y Combinator’s Hacker News, I came across an article that had put pen to paper, I swear I would have written it word for work.
+
+Going through paragraph after paragraph, it was eerily scary how similar our situations were. Titled “When Everything is Important But Nothing is Getting Done”, it was a reassuring moment to truly know that my struggle was not unique. Not that I thought I was out in the deep all by my lonesome, or that I was the first to venture out into that deep, but it can be incredibly reassuring to know, to see, to hear that it’s a path that’s been taken before. I think it’s because it becomes easier to see the way out.
+
+I’ll probably be writing about it more as I start to find my own way out - but if you’re interested, here is the article: https://sharedphysics.com/everything-is-important/
+
+### What next?
+
+One sock at a time.
+
+The biggest thing holding me back at the moment is the lack of visibility of what I can only describe as the insurmountable amount of work to do. However, it is not endless, it is tamable, and it is achievable with better, more appropriately scoped deadlines.
+
+Being a small business, the lack of resources is not a new phenomenon. We’ll reassess what’s important, and what’s possible and go from there.
+
+And I’ll be leaving it at the door. I’ve always said - being a founder is not always for everyone. Your work, your startup, and your business are your baby. This is why, what I think is a popular opinion but is gravely understated, sometimes it’s better to not be your own boss; you can leave things at the door.
+
+Thankfully (?) I have burnt out before, and I was able to catch it this time before it got to the point of no return. It did mean that it was 4 days of actively recovering, but that’s a small price to pay compared to if I had just “soldiered on”. I can’t say that I’m fully recharged, but what I can say is I am looking forward to this week, the challenge that awaits me, and the wins that await our team.
+
+## Careful with tech…
+
+For last week's readers, you’ll remember that I touted on how dictation was an incredibly powerful tool… well, with great power, comes the need for great spell checking. 😅
+
+![24hr](/assets/newsletter/2022-05-30/24hr.jpg)
+
+## Observer 🔭
+
+![Observer](/assets/newsletter/2022-05-30/observer.jpg)
+
+Since last week, I have been busy onboarding a few friends and colleagues to help me, test Observer, out in the real world, and polishing off a few items that have been making me itch a little.
+
+Side note - how nice is that graph? I’m an absolute sucker for minimal, but useful data displays. For developers out there, I know you’re going to ask, I used Recharts; worth taking a look.
+
+Steaming towards the public beta, I’ve also been ticking off several other critical functionality tasks.
+
+![Notion](/assets/newsletter/2022-05-30/notion.jpg)
+
+The intention will be to have a public beta link out to you in next week’s newsletter!
+
+## Mates Motivate
+
+Even though Observer is not fully complete, we need to keep this train moving at full speed. Ladies and gentlemen, may I introduce you to Mates Motivate. 🙌
+
+Accountability is something that really helps me get things over the line. Whether it’s my fitness goals, or my goal to create 12 startups in 12 months, sharing my goals has always been a driver for me.
+
+Mates Motivate is focused on helping to empower that relationship of accountability between friends and family.
+
+![Figma](/assets/newsletter/2022-05-30/figma.jpg)
+
+Planning the work, then working the plan, I quickly mocked up the most basic UI I could in order to help me understand…
+
+- the data structures I’d need, and
+- the user experience flow
+
+This also helped me quickly prototype the UX to test that the design fulfilled the user stories that I set out when thinking about this project.
+
+![Planning](/assets/newsletter/2022-05-30/notion-planning.jpg)
+
+Apart from that, not much has happened. I plan to knock this out over the next few days, as it’s an incredibly simplistic MVP. Ideally, I’ll want to port the user interface over to a native mobile application so that I can send push notifications, but first I want to test if the idea itself works.
+
+Let me know - would this be something that helps you? Are you someone that thrives on accountability?
+
+—
+
+That’s it for this week! I would have loved to be sending you a link of the first 24hr Build series, but our health must come first. As my wife likes to remind me, “good things come to those who wait”. As you may have guessed, I can be an impatient person sometimes. 😂
+
+I hope you had a great weekend, and that you’re excited for the week ahead. You’re going to crush it. Let me know what you’re up to!
+
+Dan
