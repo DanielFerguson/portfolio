@@ -16,6 +16,7 @@ import Link from "next/link";
 import { getNewsletterBySlug, getNewsletterNames } from "@/lib/newsletters";
 import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LogoJsonLd } from "next-seo";
 import Breadcrumbs from "@/components/breadcrumbs";
+import Newsletter from "@/components/newsletter";
 
 const navigation = [
   { name: "Projects", href: "/#projects", icon: PaperAirplaneIcon },
@@ -231,6 +232,8 @@ const Article = ({ frontmatter, content, slug }) => {
           className="prose mx-auto px-8 md:px-0"
           dangerouslySetInnerHTML={{ __html: md().render(content) }}
         />
+
+        <Newsletter />
 
         <Footer />
       </div>
