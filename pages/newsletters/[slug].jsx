@@ -51,7 +51,12 @@ const Article = ({ frontmatter, content, slug }) => {
             authors: ["Daniel Ferguson"],
             tags: [],
           },
-          images: [{ url: frontmatter.featuredImage, alt: frontmatter.title }],
+          images: [
+            {
+              url: `https://danferg.com${frontmatter.featuredImage}`,
+              alt: frontmatter.title,
+            },
+          ],
           site_name: "DanFerg",
         }}
         twitter={{
@@ -89,7 +94,7 @@ const Article = ({ frontmatter, content, slug }) => {
         url={`https://danferg.com/newsletters/${slug}`}
         title={frontmatter.title}
         description={frontmatter.excerpt}
-        images={[frontmatter.featuredImage]}
+        images={[`https://danferg.com${frontmatter.featuredImage}`]}
         datePublished={frontmatter.published}
         dateModified={frontmatter.published}
         authorName="Daniel Ferguson"
