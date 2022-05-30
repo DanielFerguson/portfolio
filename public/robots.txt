@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: https://pegboard.danferg.com*
+Disallow: https://pegboard.danferg.com/*
 
 Sitemap: https://danferg.com/sitemap.xml
